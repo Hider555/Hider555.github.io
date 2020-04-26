@@ -2,18 +2,27 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>links | Wade</title>
+<title>深拷贝与浅拷贝 | Wade</title>
 <link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1587898864627">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="links | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="深拷贝与浅拷贝 | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="😎😕😠😩
-" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="
+Python代码如下:
+foo = [1,2]
+foo1 = foo
+foo.append(3)
+
+输出foo和foo1的值
+foo = [1,2,3]
+foo1 = [1,2,3]
+
+foo1 和 foo指向同一内存地址，foo.app..." />
+    <meta name="keywords" content="Python" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -85,21 +94,64 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              links
+              深拷贝与浅拷贝
             </h2>
             <div class="post-info">
               <span>
                 2020-04-26
               </span>
               <span>
-                0 min read
+                2 min read
               </span>
+              
+                <a href="https://wwtttt.github.io/tag/TUEBLQY7_/" class="post-tag">
+                  # Python
+                </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>😎😕😠😩</p>
+                <!-- more -->
+<p>Python代码如下:</p>
+<pre><code>foo = [1,2]
+foo1 = foo
+foo.append(3)
+</code></pre>
+<p>输出foo和foo1的值</p>
+<pre><code>foo = [1,2,3]
+foo1 = [1,2,3]
+</code></pre>
+<p>foo1 和 foo指向同一内存地址，foo.append(3)foo中添加了3，相应foo1也添加了3</p>
+<hr>
+<pre><code>链接：https://www.nowcoder.com/questionTerminal/0d4af069d7d3417ba772ed93331f9057
+来源：牛客网
+
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] 
+b = a 
+c = copy.copy(a) 
+d = copy.deepcopy(a) 
+a.append(5) 
+a[4].append('c') 
+</code></pre>
+<p>解析</p>
+<pre><code>链接：https://www.nowcoder.com/questionTerminal/0d4af069d7d3417ba772ed93331f9057
+来源：牛客网
+
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] 
+b = a     # 引用，除非直接给a重新赋值，否则a变则b变，b变则a变
+c = copy.copy(a)   # 浅复制，只会拷贝父对象， 不会拷贝父对象中的子对象，所以若a的子对象变则c 变,但是父对象变c不会变
+d = copy.deepcopy(a) #深拷贝，完全拷贝，完全独立于原对象，a变也不变
+a.append(5) # 改变父对象
+a[4].append('c')  #改变父对象中的 ['a', 'b']子对象
+
+# a=[1, 2, 3, 4, ['a', 'b','c'],5] 
+b=[1, 2, 3, 4, ['a', 'b','c'],5] 
+c=[1, 2, 3, 4, ['a', 'b','c']] 
+d=[1, 2, 3, 4, ['a', 'b']] 
+</code></pre>
 
               </div>
               <div class="toc-container">
@@ -109,6 +161,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/kD0Ku9EhL/">
+              <h3 class="post-title">
+                项目requirements生成
+              </h3>
+            </a>
+          </div>
         
 
         

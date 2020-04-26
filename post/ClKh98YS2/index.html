@@ -2,18 +2,34 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>links | Wade</title>
+<title>写一个函数找出一个整数数组中，第二大的数 | Wade</title>
 <link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1587898864627">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="links | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="写一个函数找出一个整数数组中，第二大的数 | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="😎😕😠😩
-" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="
+扩展问题：
+
+写一个函数找出一个整数数组中，第k大的数（堆排序）
+
+考虑的情况：
+
+数组长度&lt;2
+数组元素全部相同
+第二大值不止一个
+
+代码实现：
+
+实现1：
+
+/**
+     * 实现： 返回第二大值
+     * 1. 数组长..." />
+    <meta name="keywords" content="算法" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -85,30 +101,98 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              links
+              写一个函数找出一个整数数组中，第二大的数
             </h2>
             <div class="post-info">
               <span>
-                2020-04-26
+                2019-09-26
               </span>
               <span>
-                0 min read
+                2 min read
               </span>
+              
+                <a href="https://wwtttt.github.io/tag/YSi3ha-Kj/" class="post-tag">
+                  # 算法
+                </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>😎😕😠😩</p>
+                <!-- more -->
+<h2 id="扩展问题">扩展问题：</h2>
+<ol>
+<li>写一个函数找出一个整数数组中，第k大的数（堆排序）</li>
+</ol>
+<h2 id="考虑的情况">考虑的情况：</h2>
+<ol>
+<li>数组长度&lt;2</li>
+<li>数组元素全部相同</li>
+<li>第二大值不止一个</li>
+</ol>
+<h2 id="代码实现">代码实现：</h2>
+<ul>
+<li>实现1：</li>
+</ul>
+<pre><code class="language-java">/**
+     * 实现： 返回第二大值
+     * 1. 数组长度小于2，不存在第二大的值，返回-1
+     * 2. 数组长度为2，返回两者中最小值
+     * 3. 从前往后遍历一遍
+     * 3.1 比最大值大，次大值变为最大值，最大值变为当前值
+     * 3.2 只比次大值大，次大值变为当前值
+     *
+     * @param a
+     * @return 第二大值
+     */
+    public static int max2(Integer[] a) {
+        if (a.length == 2)
+            return a[0] &gt; a[1] ? a[1] : a[0];
+        else if (a.length &gt; 2) {
+            int max1 = a[0] &gt; a[1] ? a[0] : a[1];
+            int max2 = a[0] &gt; a[1] ? a[1] : a[0];
+            for (int i = 2; i &lt; a.length; i++) {
+                if (a[i] &gt; max1) {
+                    max2 = max1;
+                    max1 = a[i];
+                } else if (a[i] &gt; max2)
+                    max2 = a[i];
+            }
+            return max2;
+        }
+        return -1;
+    }
+</code></pre>
+<ul>
+<li>实现2：先快排，再返回第二大的值</li>
+</ul>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%89%A9%E5%B1%95%E9%97%AE%E9%A2%98">扩展问题：</a></li>
+<li><a href="#%E8%80%83%E8%99%91%E7%9A%84%E6%83%85%E5%86%B5">考虑的情况：</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0">代码实现：</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/1Jpk3bYDZ/">
+              <h3 class="post-title">
+                你真的会用github搜索吗?
+              </h3>
+            </a>
+          </div>
         
 
         

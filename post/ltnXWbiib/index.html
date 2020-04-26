@@ -1,0 +1,436 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>设计模式6大设计原则 | Wade</title>
+<link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1587898864627">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="设计模式6大设计原则 | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+6大设计原则
+单一职责原则
+Single Responsibility Principle简称SRP
+定义
+​	应该有且仅有一个原因引起类的变更。
+好处
+
+类的复杂性降低，实现什么职责都有清晰明确的定义；
+可读性提高，复杂性降低，那当然可..." />
+    <meta name="keywords" content="设计模式" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wwtttt.github.io">
+  <img class="avatar" src="https://wwtttt.github.io/images/avatar.png?v=1587898864627" alt="">
+  </a>
+  <h1 class="site-title">
+    Wade
+  </h1>
+  <p class="site-description">
+    如果我有一朵花，我想我会送给你
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/links" class="menu">
+          友链
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WadeStack" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              设计模式6大设计原则
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-04-13
+              </span>
+              <span>
+                9 min read
+              </span>
+              
+                <a href="https://wwtttt.github.io/tag/bgmExF1OX/" class="post-tag">
+                  # 设计模式
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <!-- more -->
+<h1 id="6大设计原则">6大设计原则</h1>
+<h2 id="单一职责原则">单一职责原则</h2>
+<p><code>Single Responsibility Principle</code>简称<code>SRP</code></p>
+<h3 id="定义">定义</h3>
+<p>​	应该<code>有且仅有一个</code>原因引起<code>类的变更</code>。</p>
+<h3 id="好处">好处</h3>
+<ul>
+<li>类的复杂性降低，实现什么职责都有清晰明确的定义；</li>
+<li>可读性提高，复杂性降低，那当然可读性提高了；</li>
+<li>可维护性提高，可读性提高，那当然更容易维护了；</li>
+<li>变更引起的风险降低，变更是必不可少的，如果接口的单一职责做得好，一个接口修改只对相应的实现类有影响，对其他的接口无影响，这对系统的扩展性、维护性都有非常大的帮助。</li>
+</ul>
+<h3 id="适用范围">适用范围</h3>
+<ul>
+<li>适用于接口、类，同时也适用于方法</li>
+</ul>
+<h3 id="实例">实例</h3>
+<p>修改用户信息<code>void changeUser(IUserBO, UserBO, String..changeOpyions)</code>,根据传递的类型不同，把可变长度参数changeOptions修改到userBO这个对象上，并调用持久层的方法保存到数据库中</p>
+<p>拆分为</p>
+<ul>
+<li><code>void changeUserName(String username)</code></li>
+<li><code>void changeHomeAddress(String homeaddress)</code></li>
+<li><code>void changeOfficeTel(String officetel)</code></li>
+</ul>
+<p><code>changeUser</code>方法职责不清晰，不单一;拆分成许多接口，每个方法的职责非常清晰明确，不仅开发简单，而且日后的维护也非常容易</p>
+<h2 id="里氏替换原则">里氏替换原则</h2>
+<p><code>Liskov SubstitutionPrinciple</code>----<code>LSP</code></p>
+<h3 id="继承">继承</h3>
+<h4 id="优点">优点</h4>
+<ul>
+<li>代码共享，减少创建类的工作量，每个子类都拥有父类的方法和属性；</li>
+<li>提高代码的重用性；</li>
+<li>子类可以形似父类，但又异于父类，“龙生龙，凤生凤，老鼠生来会打洞”是说子拥有父的“种”，“世界上没有两片完全相同的叶子”是指明子与父的不同；</li>
+<li>提高代码的可扩展性，实现父类的方法就可以“为所欲为”了，君不见很多开源框架的扩展接口都是通过继承父类来完成的；</li>
+<li>提高产品或项目的开放性。</li>
+</ul>
+<h4 id="缺点">缺点</h4>
+<ul>
+<li>继承是侵入性的。只要继承，就必须拥有父类的所有属性和方法；</li>
+<li>降低代码的灵活性。子类必须拥有父类的属性和方法，让子类自由的世界中多了些约束；</li>
+<li>增强了耦合性。当父类的常量、变量和方法被修改时，需要考虑子类的修改，而且在缺乏规范的环境下，这种修改可能带来非常糟糕的结果——大段的代码需要重构。</li>
+</ul>
+<h3 id="定义-2">定义</h3>
+<ul>
+<li>第一种定义，也是最正宗的定义：If for each object o1 of type S there is an object o2 oftype T such that for all programs P defined in terms of T,the behavior of P is unchangedwhen o1 is substituted for o2 then S is a subtype of T.（如果对每一个类型为S的对象o1，都有类型为T的对象o2，使得以T定义的所有程序P在所有的对象o1都代换成o2时，程序P的行为没有发生变化，那么类型S是类型T的子类型。）</li>
+<li>第二种定义：Functions that use pointers or references to base classes must be able touse objects of derived classes without knowing it.（所有引用基类的地方必须能透明地使用其子类的对象。）</li>
+<li>第二个定义是最清晰明确的，通俗点讲，只要父类能出现的地方子类就可以出现，而且替换为子类也不会产生任何错误或异常，使用者可能根本就不需要知道是父类还是子类。但是，反过来就不行了，有子类出现的地方，父类未必就能适应。</li>
+</ul>
+<h3 id="含义">含义</h3>
+<ul>
+<li>1.子类必须完全实现父类的方法</li>
+<li>2.子类可以有自己的个性</li>
+<li>3.覆盖或实现父类的方法时输入参数可以被放大</li>
+<li>4.覆写或实现父类的方法时输出结果可以被缩小</li>
+</ul>
+<h3 id="优点-2">优点</h3>
+<p>采用里氏替换原则的目的就是增强程序的健壮性，版本升级时也可以保持非常好的兼容性。即使增加子类，原有的子类还可以继续运行。在实际项目中，每个子类对应不同的业务含义，使用父类作为参数，传递不同的子类完成不同的业务逻辑，非常完美！</p>
+<h2 id="依赖倒置原则">依赖倒置原则</h2>
+<p><code>Dependence Inversion Principle</code>------<code>DIP</code></p>
+<h3 id="定义-3">定义</h3>
+<p><code>High level modules should not depend upon low level modules.Both should dependupon abstractions.Abstractions should not depend upon details.Details should dependupon abstractions.</code></p>
+<ul>
+<li>模块间的依赖通过抽象发生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的；</li>
+<li>接口或抽象类不依赖于实现类；</li>
+<li>实现类依赖接口或抽象类。</li>
+<li>更加精简的定义就是“面向接口编程”——OOD（Object-Oriented Design，面向对象设计）的精髓之一。</li>
+</ul>
+<h3 id="优点-3">优点</h3>
+<p>可以减少类间的耦合性，提高系统的稳定性，降低并行开发引起的风险，提高代码的可读性和可维护性。</p>
+<h3 id="应用">应用</h3>
+<p>TDD（Test-Driven Development，测试驱动开发）开发模式</p>
+<h3 id="依赖的三种写法">依赖的三种写法</h3>
+<ul>
+<li>1.构造函数传递依赖对象</li>
+<li>2.Setter方法传递依赖对象</li>
+<li>3.接口声明依赖对象</li>
+</ul>
+<h3 id="最佳实践">最佳实践</h3>
+<ul>
+<li>每个类尽量都有接口或抽象类，或者抽象类和接口两者都具备</li>
+<li>变量的表面类型尽量是接口或者是抽象类</li>
+<li>任何类都不应该从具体类派生</li>
+<li>尽量不要覆写基类的方法</li>
+<li>结合里氏替换原则使用</li>
+</ul>
+<h2 id="接口隔离原则">接口隔离原则</h2>
+<h2 id="接口类型">接口类型</h2>
+<h4 id="实例接口">实例接口</h4>
+<p>实例接口（Object Interface），在Java中声明一个类，然后用new关键字产生一个实例，它是对一个类型的事物的描述，这是一种接口。比如你定义Person这个类，然后使用PersonzhangSan=new Person()产生了一个实例，这个实例要遵从的标准就是Person这个类，Person类就是zhangSan的接口。</p>
+<p><code>java类就是一个接口</code></p>
+<h4 id="类接口">类接口</h4>
+<p>Java中经常使用的<code>interface</code>关键字定义的接口</p>
+<h2 id="隔离">隔离</h2>
+<ul>
+<li>
+<p>Clients should not be forced to depend upon interfaces that they don't use.（客户端不应该依赖它不需要的接口。）</p>
+</li>
+<li>
+<p>The dependency of one class to another one should depend on the smallest possibleinterface.（类间的依赖关系应该建立在最小的接口上。）</p>
+</li>
+<li>
+<p>建立单一接口，不要建立臃肿庞大的接口</p>
+</li>
+<li>
+<p>接口尽量细化，同时接口中的方法尽量少。</p>
+</li>
+</ul>
+<h3 id="与单一职责原则的联系">与单一职责原则的联系</h3>
+<p>接口隔离原则与单一职责的审视角度是不相同的，单一职责要求的是<code>类和接口职责单一</code>，注重的是职责，这是<code>业务逻辑上</code>的划分，而接口隔离原则要求接口的方法尽量少。例如一个接口的职责可能包含10个方法，这10个方法都放在一个接口中，并且提供给多个模块访问，各个模块按照规定的权限来访问，在系统外通过文档约束“不使用的方法不要访问”，按照单一职责原则是允许的，按照接口隔离原则是不允许的，因为它要求“尽量使用多个专门的接口”。专门的接口指什么？就是指提供给每个模块的都应该是单一接口，提供给几个模块就应该有几个接口，而不是建立一个庞大的臃肿的接口，容纳所有的客户端访问。</p>
+<h3 id="规范约束">规范约束</h3>
+<ul>
+<li>接口要尽量小,但<code>不能违反单一职责原则</code></li>
+<li>接口要高内聚</li>
+<li>定制服务</li>
+</ul>
+<h2 id="迪米特法原则">迪米特法原则</h2>
+<p>迪米特法则（Law of Demeter，LoD）也称为最少知识原则（Least Knowledge Principle，LKP）</p>
+<h3 id="规则">规则</h3>
+<p>一个对象应该对其他对象有最少的了解。通俗地讲，一个类应该对自己需要耦合或调用的类知道得最少，你（被耦合或调用的类）的内部是如何复杂都和我没关系，那是你的事情，我就知道你提供的这么多public方法，我就调用这么多，其他的我一概不关心。</p>
+<h3 id="含义-2">含义</h3>
+<ul>
+<li>只和朋友交流</li>
+<li>朋友间也是有距离的</li>
+<li>是自己的就是自己的</li>
+<li>谨慎使用Serializable</li>
+</ul>
+<h2 id="开闭原则">开闭原则</h2>
+<h3 id="定义-4">定义</h3>
+<p>Software entities like classes,modules and functions should be open for extension butclosed for modifications.（一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。）</p>
+<ul>
+<li>软件实体应该对扩展开放，对修改关闭，其含义是说一个软件实体应该通过扩展来实现变化，而不是通过修改已有的代码来实现变化。</li>
+</ul>
+<p>软件实体</p>
+<ul>
+<li>项目或软件产品中按照一定的逻辑规则划分的模块。</li>
+<li>抽象和类。</li>
+<li>方法。</li>
+</ul>
+<h3 id="为什么要采用开闭原则">为什么要采用开闭原则</h3>
+<ul>
+<li>开闭原则对测试的影响</li>
+<li>开闭原则可以提高复用性</li>
+<li>开闭原则可以提高可维护性</li>
+<li>面向对象开发的要求</li>
+</ul>
+<h3 id="如何使用开闭原则">如何使用开闭原则</h3>
+<ul>
+<li>抽象约束</li>
+<li>元数据（metadata）控制模块行为</li>
+<li>制定项目章程</li>
+<li>封装变化</li>
+</ul>
+<h3 id="使用注意事项">使用注意事项</h3>
+<ul>
+<li>开闭原则也只是一个原则</li>
+<li>项目规章非常重要</li>
+<li>预知变化，拥抱变化</li>
+</ul>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#6%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99">6大设计原则</a>
+<ul>
+<li><a href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99">单一职责原则</a>
+<ul>
+<li><a href="#%E5%AE%9A%E4%B9%89">定义</a></li>
+<li><a href="#%E5%A5%BD%E5%A4%84">好处</a></li>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4">适用范围</a></li>
+<li><a href="#%E5%AE%9E%E4%BE%8B">实例</a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99">里氏替换原则</a>
+<ul>
+<li><a href="#%E7%BB%A7%E6%89%BF">继承</a>
+<ul>
+<li><a href="#%E4%BC%98%E7%82%B9">优点</a></li>
+<li><a href="#%E7%BC%BA%E7%82%B9">缺点</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%9A%E4%B9%89-2">定义</a></li>
+<li><a href="#%E5%90%AB%E4%B9%89">含义</a></li>
+<li><a href="#%E4%BC%98%E7%82%B9-2">优点</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99">依赖倒置原则</a>
+<ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-3">定义</a></li>
+<li><a href="#%E4%BC%98%E7%82%B9-3">优点</a></li>
+<li><a href="#%E5%BA%94%E7%94%A8">应用</a></li>
+<li><a href="#%E4%BE%9D%E8%B5%96%E7%9A%84%E4%B8%89%E7%A7%8D%E5%86%99%E6%B3%95">依赖的三种写法</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99">接口隔离原则</a></li>
+<li><a href="#%E6%8E%A5%E5%8F%A3%E7%B1%BB%E5%9E%8B">接口类型</a><br>
+*
+<ul>
+<li><a href="#%E5%AE%9E%E4%BE%8B%E6%8E%A5%E5%8F%A3">实例接口</a></li>
+<li><a href="#%E7%B1%BB%E6%8E%A5%E5%8F%A3">类接口</a></li>
+</ul>
+</li>
+<li><a href="#%E9%9A%94%E7%A6%BB">隔离</a>
+<ul>
+<li><a href="#%E4%B8%8E%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99%E7%9A%84%E8%81%94%E7%B3%BB">与单一职责原则的联系</a></li>
+<li><a href="#%E8%A7%84%E8%8C%83%E7%BA%A6%E6%9D%9F">规范约束</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%8E%9F%E5%88%99">迪米特法原则</a>
+<ul>
+<li><a href="#%E8%A7%84%E5%88%99">规则</a></li>
+<li><a href="#%E5%90%AB%E4%B9%89-2">含义</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99">开闭原则</a>
+<ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-4">定义</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%87%87%E7%94%A8%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99">为什么要采用开闭原则</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99">如何使用开闭原则</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">使用注意事项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/M7awoMKbc/">
+              <h3 class="post-title">
+                线程-进程-协程
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'a0ad157ae22a97425ca6',
+    clientSecret: 'ea3ccc6f577ced8b8fb84fe755aa91c33f00512f',
+    repo: 'wwtttt.github.io',
+    owner: 'wwtttt',
+    admin: ['wwtttt'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Copyrights © 2019-2020 Wade
+  <a class="rss" href="https://wwtttt.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

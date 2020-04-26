@@ -2,18 +2,22 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>links | Wade</title>
+<title>LeetCode cpp代码缩减runtime | Wade</title>
 <link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1587898864627">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="links | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="LeetCode cpp代码缩减runtime | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="😎😕😠😩
-" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="
+在leetcode第11题看到一个题解，添加到代码前面，大幅缩减runtime
+代码为：
+static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullp..." />
+    <meta name="keywords" content="LeetCode" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -85,21 +89,58 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              links
+              LeetCode cpp代码缩减runtime
             </h2>
             <div class="post-info">
               <span>
-                2020-04-26
+                2019-10-11
               </span>
               <span>
-                0 min read
+                1 min read
               </span>
+              
+                <a href="https://wwtttt.github.io/tag/qSvdtmKoO/" class="post-tag">
+                  # LeetCode
+                </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>😎😕😠😩</p>
+                <!-- more -->
+<p>在leetcode第11题看到一个题解，添加到代码前面，大幅缩减runtime</p>
+<p>代码为：</p>
+<pre><code>static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	return 0;
+}();
+</code></pre>
+<p>leetcode11题解</p>
+<pre><code>static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	return 0;
+}();
+class Solution
+{
+public:
+    int maxArea(vector&lt;int&gt; &amp;height)
+    {
+        int i = 0, j = height.size() - 1, water = 0;
+        while (i &lt; j)
+        {
+            int h = min(height[i], height[j]);
+            water = max(water, (j - i) * h);
+            while (height[i] &lt;= h &amp;&amp; i &lt; j)
+                i++;
+            while (height[j] &lt;= h &amp;&amp; i &lt; j)
+                j--;
+        }
+        return water;
+    }
+};
+</code></pre>
 
               </div>
               <div class="toc-container">
@@ -109,6 +150,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/ZFRD2AlYT/">
+              <h3 class="post-title">
+                不用加减乘除做加法
+              </h3>
+            </a>
+          </div>
         
 
         

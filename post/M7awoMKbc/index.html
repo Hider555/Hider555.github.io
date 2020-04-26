@@ -2,18 +2,18 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>links | Wade</title>
+<title>线程-进程-协程 | Wade</title>
 <link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1587898864627">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="links | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="线程-进程-协程 | Wade - Atom Feed" href="https://wwtttt.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="😎😕😠😩
-" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="
+Python中因为有GIL(全局解释器锁)的存在，例如，某个线程想要执行，必须先拿到GIL，我们可以把GIL看作“通行证”，并且在一个Python进程中，GIL只有一个。拿不到通行证的线程就不允许进入CPU执行。每次释放GIL锁，线程之间..." />
+    <meta name="keywords" content="Python" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -85,30 +85,96 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              links
+              线程-进程-协程
             </h2>
             <div class="post-info">
               <span>
-                2020-04-26
+                2020-03-03
               </span>
               <span>
-                0 min read
+                3 min read
               </span>
+              
+                <a href="https://wwtttt.github.io/tag/TUEBLQY7_/" class="post-tag">
+                  # Python
+                </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>😎😕😠😩</p>
+                <!-- more -->
+<p>Python中因为有GIL(全局解释器锁)的存在，例如，某个线程想要执行，必须先拿到GIL，我们可以把GIL看作“通行证”，并且在一个Python进程中，GIL只有一个。拿不到通行证的线程就不允许进入CPU执行。每次释放GIL锁，线程之间都会进行锁竞争，而切换线程会消耗资源。由于GIL锁的存在，Python里一个进程永远只能同时执行一个线程（拿到GIL的线程才能执行），这就是在多核CPU上Python的多线程效率不高的原因。</p>
+<p>Python的多线程对于IO密集型代码比较友好，网络爬虫能够在获取网页的过程中使用多线程，从而加快速度。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多线程</td>
+<td>Python的多线程对于IO密集型代码比较友好</td>
+<td>多核CPU上Python的多线程效率不高</td>
+<td>IO密集</td>
+</tr>
+<tr>
+<td>多进程</td>
+<td>提升对多核性能的利用</td>
+<td>太消耗资源</td>
+<td></td>
+</tr>
+<tr>
+<td>协程</td>
+<td>1.协程像一种在程序级别模拟系统级别的进程，由于是单线程，并且少了上下文切换，因此相对来说系统消耗很少，而且网上的各种测试也表明协程确实拥有惊人的速度。       2.协程方便切换控制流，这就简化了编程模型。协程能保留上一次调用时的状态（所有局部状态的一个特定组合），每次过程重入时，就相当于进入了上一次调用的状态。     3.协程的高扩展性和高并发性，一个CPU支持上万协程都不是问题，所以很适合用于高并发处理。</td>
+<td>1.协程的本质是一个单线程，不能同时使用单个CPU的多核，需要和进程配合才能运行在多CPU上。         2.有长时间阻塞的IO操作时不要用协程，因为可能会阻塞整个程序。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="爬虫">爬虫</h2>
+<p>0.单线程</p>
+<p>1.基于_thread的多线程</p>
+<p>2.基于threading的多线程</p>
+<p>3.基于threading+Queue的多线程</p>
+<p>4.基于Process + Queue的multiprocess多进程</p>
+<p>5.基于Pool +Queue的multiprocess多进程</p>
+<p>6.基于gevent的多协程</p>
+<p>7.基于aiohttp的多协程</p>
+<p>8.grequests</p>
+<blockquote>
+<p>Requests + Gevent = ❤️ https://pypi.python.org/pypi/grequests</p>
+</blockquote>
+<p>9.多线程+协程组合</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%88%AC%E8%99%AB">爬虫</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/vBBQoD9sY/">
+              <h3 class="post-title">
+                怎么做自我介绍?
+              </h3>
+            </a>
+          </div>
         
 
         

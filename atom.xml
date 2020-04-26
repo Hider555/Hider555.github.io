@@ -1,19 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://wwtttt.github.io/demo</id>
+    <id>https://wwtttt.github.io</id>
     <title>Wade</title>
-    <updated>2020-04-26T10:12:19.617Z</updated>
+    <updated>2020-04-26T11:01:39.228Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://wwtttt.github.io/demo"/>
-    <link rel="self" href="https://wwtttt.github.io/demo/atom.xml"/>
+    <link rel="alternate" href="https://wwtttt.github.io"/>
+    <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
     <subtitle>如果我有一朵花，我想我会送给你</subtitle>
-    <logo>https://wwtttt.github.io/demo/images/avatar.png</logo>
-    <icon>https://wwtttt.github.io/demo/favicon.ico</icon>
+    <logo>https://wwtttt.github.io/images/avatar.png</logo>
+    <icon>https://wwtttt.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Wade</rights>
     <entry>
+        <title type="html"><![CDATA[2020年TW暑假实习面经]]></title>
+        <id>https://wwtttt.github.io/post/T7eTK-84z/</id>
+        <link href="https://wwtttt.github.io/post/T7eTK-84z/">
+        </link>
+        <updated>2020-04-26T10:49:54.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="了解思特沃克">了解思特沃克</h1>
+<h2 id="简介">简介</h2>
+<p>ThoughtWorks是一家全球软件设计与定制领袖企业，ThoughtWorks的业务模式主要通过咨询帮助改善企业的IT组织，改进软件开发方法，以软件带动企业业务发展。ThoughtWorks<strong>并非一家劳动密集型企业，不以人才扩张为支撑业务发展</strong>的基础。ThoughtWorks以发展<strong>高、精、尖</strong>的创新业务设计和创意咨询为主要业务内容，以高端人才带动整个产业的理念革新和方法进步，促进整个产业链的健康生态循环。ThoughtWorks服务的客户重视软件开发方法，重视软件对业务发展至关重要的作用；鼓励创意设计，寻求创新的业务模式以占据企业翘楚。通过定制软件开发，ThoughtWorks为客户提供集创意设计、开发及交付为一体的定制服务。</p>
+<h2 id="工作地点">工作地点</h2>
+<ul>
+<li>北京</li>
+<li>上海</li>
+<li>深圳</li>
+<li>武汉</li>
+<li>成都</li>
+<li>西安</li>
+</ul>
+<h2 id="岗位">岗位</h2>
+<ul>
+<li>PM	产品经理</li>
+<li>Dev   软件开发人员</li>
+<li>BA	业务需求分析师，承接某个具体业务需求的产品经理就叫BA</li>
+<li>QA	在软件开发过程中做好软件质量分析和保证的人员</li>
+<li>UX	用户体验人员</li>
+<li>UT	单元测试</li>
+</ul>
+<h2 id="官方技术网站">官方技术网站</h2>
+<ul>
+<li><a href="https://insights.thoughtworks.cn/">ThoughtWorks洞见</a>（微信公众号:ThoughtWorks洞见）</li>
+</ul>
+<h2 id="开发模式">开发模式</h2>
+<ul>
+<li>敏捷(Scrum+XP)开发</li>
+<li>结对编程</li>
+<li>DevOps</li>
+<li>DDD 领域驱动设计</li>
+<li>TDD  测试驱动开发</li>
+</ul>
+<h1 id="招聘流程">招聘流程</h1>
+<h2 id="1线上测评05h性格测评">1.线上测评(0.5h)+性格测评</h2>
+<h3 id="行测题目">行测题目</h3>
+<ol>
+<li>文字主旨/推理 * 10</li>
+<li>图表题 * 11</li>
+<li>图形规律 * 9</li>
+<li>98题，性格测评，时间充足。</li>
+</ol>
+<p><strong>声明：好好作答，这部分测试也会挂人，不要以为不重要。</strong></p>
+<h2 id="2技术测评2h面试05h">2.技术测评(2h)+面试(0.5h)</h2>
+<p>一道综合大题，时间2小时，共三问，不强求AC，但需要方案及实现过程</p>
+<p><strong>划重点：不要切屏，不要切屏，不要切屏</strong></p>
+<ol>
+<li>保持在题目界面不要离开，</li>
+<li>视作离开的情况：
+<ol>
+<li>点击底部栏(第一次我关网xx音乐，账号作废</li>
+<li>切换到另一个网页(第二次收到邮件，手贱切了下，账号又作废了)</li>
+</ol>
+</li>
+<li>多准备几张干净的草稿纸(需要拍照转word或者pdf)</li>
+</ol>
+<p>tips:</p>
+<ol>
+<li>切屏账号自动作废，很麻烦，可以向账号提供商要一个。（我那天换了三个号</li>
+<li>如果收件箱没有邮件，一定是被归到广告（垃圾）邮件去了。</li>
+</ol>
+<h3 id="具体要求">具体要求</h3>
+<ol>
+<li>写出所有方案</li>
+<li>比较所有方案的优缺点</li>
+<li>探测案例方案的选择和测试用例</li>
+</ol>
+<h3 id="面试环节">面试环节</h3>
+<p>面试之前，我又重新用画图软件将我方案的实现思路、流程图和所有(3种)方案画了出来。</p>
+<p>面试首先是一个简短的自我介绍，然乎直奔主题。</p>
+<p>然后我用的投屏，让面试官看我的桌面，我用做好的图片给面试官讲解思路。</p>
+<p>首先是整体思路，先讲怎么做，再讲为什么，然后分析了各种方案的优缺点及实现难度，将一个东西拆分成多个，然后以模块化思想，进行复用；还有几种方案之间的依赖关系，如何选择合适的方案。</p>
+<p>面试官提了两个问题：</p>
+<p>​	1.一句话总结你的方案：</p>
+<p>​		我的回答：拆分、组合、复用</p>
+<p>​	2.你需要多久能实现你的方案，可能会遇到什么问题？</p>
+<p>​		根据自己的思路作答即可</p>
+<p>面完之后，面试官会问你有什么想问你的，我问了tw实习生的暑期实习会做些什么，同时表明了强烈的想去tw(tw实习开启后，秒投简历)。</p>
+<h3 id="面试感觉">面试感觉</h3>
+<p>这次面试的感觉很棒，跟以往的不一样(中大公司就问你简历上写的基础，我实在记不住那么多)。试我的是一个资深软件工程师(15年工作经验)，刚开始自我介绍有点紧张，深呼吸了下，面试官也很亲切的笑笑，示意我不用紧张。tw的面试不同以往的技术面，它从一个题目考察你的方案能力，项目分析、项目优化的能力，我个人还是比较享受这种面试的。</p>
+<h3 id="小插曲">小插曲</h3>
+<p>这次面试完，我的状态先是由面试预约中变为线上测试(搞得我好慌，以为面试凉了)，然后过了两天又从线上测试变为面试预约，又过了一天，收到hr电话。</p>
+<p>没有收到明确的感谢信之前，都没有凉（凉了会收到tw的感谢信）</p>
+<h2 id="3动机测试25min职业性格测试25min">3.动机测试(25min)+职业性格测试(25min)</h2>
+<p>hr会发送做题链接的邮件，在规定时间内完成。测评也要好好答题，虽然不会挂，但hr可能会根据测评结果评估你是否符合公司。</p>
+<h2 id="4u加面45min">4.u加面（45min）</h2>
+<blockquote>
+<p>两面试官问技术，hr估计在笔记（全程没提问）</p>
+</blockquote>
+<h3 id="1自我介绍">1.自我介绍</h3>
+<h3 id="2大学哪门课程带给你很大的帮助">2.大学哪门课程带给你很大的帮助</h3>
+<h3 id="3项目面">3.项目面</h3>
+<h4 id="1项目分工">1.项目分工</h4>
+<h4 id="2自己承担的职位">2.自己承担的职位</h4>
+<h4 id="3项目难点如何解决">3.项目难点，如何解决</h4>
+<p>我提到了跨域问题，并说了跨域问题的解决，还有一些团队开发过程中沟通的问题。</p>
+<p>面试官：为什么浏览器会禁止跨域</p>
+<p>我：emmmm，忘了</p>
+<h4 id="4项目技术选型">4.项目技术选型：</h4>
+<p>自己选的还是怎么选的？为什么这么选？</p>
+<p>有和团队成员沟通过技术选型的问题吗？</p>
+<h3 id="提问">提问：</h3>
+<h5 id="公司对实习生有一个什么期望">公司对实习生有一个什么期望？</h5>
+<p>快速学习的能力，适应环境</p>
+<h5 id="你对我今天的面试有什么评价或者建议">你对我今天的面试，有什么评价或者建议？</h5>
+<p>改变应试教育的思维。工作不是考试，没有固定的答案，没有题库给你刷到高分。会遇到许多未知问题。</p>
+<p>学习一些人文、社会学、心理学的东西。学会与周围的环境沟通交流。</p>
+<h1 id="时间线">时间线</h1>
+<h2 id="2021届暑假实习">2021届暑假实习</h2>
+<p>3-16：实习招聘开始：投递简历</p>
+<p>3-16：收到在线测评邮件，完成测评</p>
+<p>3-20：收到面试预约邮件，完成预约</p>
+<p>3-27：收到面试预约成功的邮件，并确定了调整的面试时间</p>
+<p>4-6：收到远程面试邀请邮件</p>
+<p>4-8：收到技术测评邮件和答案提交的邮件</p>
+<p>4-9：技术测评</p>
+<p>4-10：陈述技术测评方案</p>
+<p>4-15：接到hr的电话，完成动机测试和性格测试，加了hr好友</p>
+<p>4-16：hr通知下周一面试，发送邮件告知详细时间还有ZoomID</p>
+<p>4-20：u加面</p>
+<p>面试结果需等一周</p>
+<h1 id="可参考的帖子">可参考的帖子</h1>
+<ul>
+<li><a href="https://www.nowcoder.com/discuss/395229">2020届春招面经之ThoughtWorks—软件开发工程师</a></li>
+<li><a href="https://www.nowcoder.com/discuss/15668">写一拨ThoughtWorks面经</a></li>
+<li><a href="https://www.nowcoder.com/discuss/33839">ThoughtWorks面试经历，干货满满</a></li>
+<li><a href="https://www.nowcoder.com/discuss/90639">ThoughtWork软开（成都）面试</a></li>
+<li><a href="https://www.nowcoder.com/discuss/91874">ThoughtWorks面经</a></li>
+<li><a href="https://www.nowcoder.com/discuss/92270">武汉Thoughtworks软开面经【已给offer】</a></li>
+<li><a href="https://www.nowcoder.com/discuss/93326">thoughtworks面经（offer已拿）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/96929">thoughtWorks面经（刚收到offer）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/151667">ThoughtWorks java开发18年秋招笔试题</a></li>
+<li><a href="https://www.nowcoder.com/discuss/152333">【ThoughtWorks内推】BA面经（已拿offer）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/220821">thoughtworks凉经，C++(成都)</a></li>
+<li><a href="https://www.nowcoder.com/discuss/223009">thoughtworks面经，软开(西安)</a></li>
+<li><a href="https://www.nowcoder.com/discuss/223445">ThoughtWorks面试经历（武汉）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/227643">Thoughtworks国际岗软开（非计算机专业）面经-西安</a></li>
+<li><a href="https://www.nowcoder.com/discuss/240371">2020秋招面经大汇总（ThoughtWorks）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/246188">Thoughtworks面经分享</a></li>
+<li><a href="https://www.nowcoder.com/discuss/248128">Thoughtworks面经 感觉凉</a></li>
+<li><a href="https://www.nowcoder.com/discuss/395229">2020届春招面经之ThoughtWorks—软件开发工程师</a></li>
+<li><a href="https://www.nowcoder.com/discuss/406227">ThoughtWorks面经（非计软件开发base西安）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/411993?type=post&amp;order=time&amp;pos=&amp;page=1&amp;subType=2">Thoughtworks2021届暑期实习面经 </a></li>
+<li><a href="https://www.nowcoder.com/discuss/373028?type=2">还愿thoughtworks(已拿offer）附个人面经</a></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[深拷贝与浅拷贝]]></title>
+        <id>https://wwtttt.github.io/post/VkKLxZjqk/</id>
+        <link href="https://wwtttt.github.io/post/VkKLxZjqk/">
+        </link>
+        <updated>2020-04-26T10:48:13.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>Python代码如下:</p>
+<pre><code>foo = [1,2]
+foo1 = foo
+foo.append(3)
+</code></pre>
+<p>输出foo和foo1的值</p>
+<pre><code>foo = [1,2,3]
+foo1 = [1,2,3]
+</code></pre>
+<p>foo1 和 foo指向同一内存地址，foo.append(3)foo中添加了3，相应foo1也添加了3</p>
+<hr>
+<pre><code>链接：https://www.nowcoder.com/questionTerminal/0d4af069d7d3417ba772ed93331f9057
+来源：牛客网
+
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] 
+b = a 
+c = copy.copy(a) 
+d = copy.deepcopy(a) 
+a.append(5) 
+a[4].append('c') 
+</code></pre>
+<p>解析</p>
+<pre><code>链接：https://www.nowcoder.com/questionTerminal/0d4af069d7d3417ba772ed93331f9057
+来源：牛客网
+
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] 
+b = a     # 引用，除非直接给a重新赋值，否则a变则b变，b变则a变
+c = copy.copy(a)   # 浅复制，只会拷贝父对象， 不会拷贝父对象中的子对象，所以若a的子对象变则c 变,但是父对象变c不会变
+d = copy.deepcopy(a) #深拷贝，完全拷贝，完全独立于原对象，a变也不变
+a.append(5) # 改变父对象
+a[4].append('c')  #改变父对象中的 ['a', 'b']子对象
+
+# a=[1, 2, 3, 4, ['a', 'b','c'],5] 
+b=[1, 2, 3, 4, ['a', 'b','c'],5] 
+c=[1, 2, 3, 4, ['a', 'b','c']] 
+d=[1, 2, 3, 4, ['a', 'b']] 
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[项目requirements生成]]></title>
+        <id>https://wwtttt.github.io/post/kD0Ku9EhL/</id>
+        <link href="https://wwtttt.github.io/post/kD0Ku9EhL/">
+        </link>
+        <updated>2020-04-26T10:47:52.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>1.下载pipreqs</p>
+<p><code>pip install pipreqs</code></p>
+<p>2.进入cmd命令行,进入到项目目录的上级目录</p>
+<p><code>pipreqs 项目名</code></p>
+<p>3.安装requirements</p>
+<p><code>pip install -r requirements.txt</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[虚拟环境和包管理]]></title>
+        <id>https://wwtttt.github.io/post/z1IIpzzmM/</id>
+        <link href="https://wwtttt.github.io/post/z1IIpzzmM/">
+        </link>
+        <updated>2020-04-26T10:47:18.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h2 id="1创建虚拟环境">1.创建虚拟环境</h2>
+<p><code>python - m venv 虚拟环境名</code></p>
+<h2 id="2启动虚拟环境">2.启动虚拟环境</h2>
+<h6 id="win">win:</h6>
+<p><code>虚拟环境名\Scripts\activate.bat</code></p>
+<h6 id="maclinux">mac/linux:</h6>
+<p><code>source 虚拟环境名/bin/activate</code></p>
+<h2 id="3退出虚拟环境deactivate">3.退出虚拟环境**<code>deactivate</code>**</h2>
+<h2 id="4pip管理包">4.pip管理包</h2>
+<p><code>pip install 包名</code></p>
+<h2 id="5生成requirementstxt">5.生成<strong>requirements.txt</strong></h2>
+<p><code>pip freeze &gt; requirements.txt</code></p>
+<h2 id="6使用requirementstxt">6.使用<strong>requirements.txt</strong></h2>
+<p><code>pip install -r requirements.txt</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[bashrc修改导致linux系统指令不能用的解决方案]]></title>
+        <id>https://wwtttt.github.io/post/A3Qp5QYkS/</id>
+        <link href="https://wwtttt.github.io/post/A3Qp5QYkS/">
+        </link>
+        <updated>2020-04-26T10:46:37.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>参考博客:</p>
+<ul>
+<li>https://www.cnblogs.com/chenglee/p/7476852.html</li>
+</ul>
+<p>解决方案：</p>
+<p>重新赋予环境变量PATH就行</p>
+<pre><code class="language-shell">export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[从尾到头打印链表]]></title>
-        <id>https://wwtttt.github.io/demo/post/cong-wei-dao-tou-da-yin-lian-biao/</id>
-        <link href="https://wwtttt.github.io/demo/post/cong-wei-dao-tou-da-yin-lian-biao/">
+        <id>https://wwtttt.github.io/post/cong-wei-dao-tou-da-yin-lian-biao/</id>
+        <link href="https://wwtttt.github.io/post/cong-wei-dao-tou-da-yin-lian-biao/">
         </link>
         <updated>2020-04-24T08:30:33.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -79,6 +336,448 @@ public class Solution {
     }
 }  
 </code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[是时候该放弃百度网盘了]]></title>
+        <id>https://wwtttt.github.io/post/4KC7aNbaradsa/</id>
+        <link href="https://wwtttt.github.io/post/4KC7aNbaradsa/">
+        </link>
+        <updated>2020-04-23T10:24:58.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="知乎相关问题">知乎相关问题：</h1>
+<ul>
+<li><a href="https://www.zhihu.com/question/388835247/answer/1166760742">如何看待<em>百度网盘</em>默认开启加入用户激励计划，在用户不知情的情况下上传文件？</a></li>
+<li><a href="https://www.zhihu.com/question/389378065/answer/1168144031">如何看待<em>百度网盘</em>道歉，将对「用户激励计划」全部用户做取消处理？</a></li>
+<li><a href="https://www.zhihu.com/question/369299799/answer/1166376608"><em>百度网盘</em>用户激励计划是什么？</a></li>
+<li><a href="https://www.zhihu.com/question/20011323/answer/218477529">为什么很多人都说<em>百度</em>是家缺德的公司？</a></li>
+<li><a href="https://www.zhihu.com/question/39442061/answer/153192152"><em>百度</em>到底作<em>了哪些恶</em>？</a></li>
+</ul>
+<h1 id="写在前面">写在前面</h1>
+<p><img src="https://wwtttt.github.io/post-images/1587896837938.png" alt="" loading="lazy"><br>
+我来给翻译翻译：</p>
+<ul>
+<li>
+<p>美好-用户可以用来薅羊毛，确实美好</p>
+</li>
+<li>
+<p>永远陪伴-永远褥用户的带宽，把用户当肉鸡。</p>
+</li>
+</ul>
+<p>百度网盘，无疑是国内市场NO.1的网盘提供商，可是一次又一次作恶，让我不得不放弃它了。</p>
+<h1 id="百度网盘的恶">百度网盘的恶</h1>
+<h2 id="无脑限速">无脑限速</h2>
+<p>个位数kb/s的下载速度，vip还不具备下载加速，要加速只能选择svip，记得再次再出个ssvip。</p>
+<p>这是我svip的速度，100M的电信宽带。</p>
+<figure data-type="image" tabindex="1"><img src="https://wwtttt.github.io/post-images/1587896912203.png" alt="" loading="lazy"></figure>
+<h2 id="用户激励计划">用户激励计划</h2>
+<figure data-type="image" tabindex="2"><img src="https://wwtttt.github.io/post-images/1587896939254.png" alt="" loading="lazy"></figure>
+<p>在知乎看到关于百度网盘用户激励计划之前，我是根本不了解这个东西的，查看了一下，我的账号是2019年5月多就开始“被自愿”加入用户激励计划了。最多一天30积分，蓐了我多少带宽，最近十几天薅了我快10g的流量。<br>
+<img src="https://wwtttt.github.io/post-images/1587896954169.png" alt="" loading="lazy"></p>
+<h3 id="用户激励藏在哪">用户激励藏在哪</h3>
+<p>打开桌面客户端-&gt;设置-&gt;传输-高级设置，默认是勾选用户激励计划，取消勾选，百度照样薅你的带宽，不信，测试一下。<br>
+<img src="https://wwtttt.github.io/post-images/1587896975352.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="3"><img src="https://wwtttt.github.io/post-images/1587896988784.png" alt="" loading="lazy"></figure>
+<h3 id="百度云p2p有多狠">百度云p2p有多狠</h3>
+<p>我把百度云上传速度设为最小的1kb，火绒也把程序上传限速为10kb。</p>
+<figure data-type="image" tabindex="4"><img src="https://wwtttt.github.io/post-images/1587897010367.png" alt="" loading="lazy"></figure>
+<p>而后台检测到的速度为多少呢</p>
+<p>大于10kb，百度你真的可以。（没禁用前，有时能跑到1-2mb/s的上传速度，已超过用户激励计划的1MB带宽）<br>
+<img src="https://wwtttt.github.io/post-images/1587897056775.png" alt="" loading="lazy"></p>
+<p>现在我已更换OneDrive+双移动硬盘，百度，一次又一次把自己玩崩。</p>
+<h2 id="资源和谐">资源和谐</h2>
+<p>资源会突然被和谐，哪怕你压根没有传播，用百度网盘备份要小心了，备份的东西会随时有可能因为莫名其妙的原因被和谐。</p>
+<p>没有隐私和保密性。后台人员可以随时观看你存在网盘里的资源，要不然你怎么被和谐的？用百度网盘等于把你的隐私等于公之于众。</p>
+<h1 id="百度旗下产品的替代品">百度旗下产品的替代品：</h1>
+<h2 id="搜索">搜索:</h2>
+<ul>
+<li>必应</li>
+<li>谷歌</li>
+</ul>
+<h2 id="网盘">网盘:</h2>
+<ul>
+<li>OneDrive</li>
+<li>坚果云</li>
+<li>移动硬盘+NAS</li>
+</ul>
+<h1 id="写在最后">写在最后：</h1>
+<p>互联网时代，你是否愿意用隐私换取便利？你愿意做一个透明人吗</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2020年TW暑假实习面经]]></title>
+        <id>https://wwtttt.github.io/post/HMPtvZtRm/</id>
+        <link href="https://wwtttt.github.io/post/HMPtvZtRm/">
+        </link>
+        <updated>2020-04-20T10:52:14.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="了解思特沃克">了解思特沃克</h1>
+<h2 id="简介">简介</h2>
+<p>ThoughtWorks是一家全球软件设计与定制领袖企业，ThoughtWorks的业务模式主要通过咨询帮助改善企业的IT组织，改进软件开发方法，以软件带动企业业务发展。ThoughtWorks<strong>并非一家劳动密集型企业，不以人才扩张为支撑业务发展</strong>的基础。ThoughtWorks以发展<strong>高、精、尖</strong>的创新业务设计和创意咨询为主要业务内容，以高端人才带动整个产业的理念革新和方法进步，促进整个产业链的健康生态循环。ThoughtWorks服务的客户重视软件开发方法，重视软件对业务发展至关重要的作用；鼓励创意设计，寻求创新的业务模式以占据企业翘楚。通过定制软件开发，ThoughtWorks为客户提供集创意设计、开发及交付为一体的定制服务。</p>
+<h2 id="工作地点">工作地点</h2>
+<ul>
+<li>北京</li>
+<li>上海</li>
+<li>深圳</li>
+<li>武汉</li>
+<li>成都</li>
+<li>西安</li>
+</ul>
+<h2 id="岗位">岗位</h2>
+<ul>
+<li>PM	产品经理</li>
+<li>Dev   软件开发人员</li>
+<li>BA	业务需求分析师，承接某个具体业务需求的产品经理就叫BA</li>
+<li>QA	在软件开发过程中做好软件质量分析和保证的人员</li>
+<li>UX	用户体验人员</li>
+<li>UT	单元测试</li>
+</ul>
+<h2 id="官方技术网站">官方技术网站</h2>
+<ul>
+<li><a href="https://insights.thoughtworks.cn/">ThoughtWorks洞见</a>（微信公众号:ThoughtWorks洞见）</li>
+</ul>
+<h2 id="开发模式">开发模式</h2>
+<ul>
+<li>敏捷(Scrum+XP)开发</li>
+<li>结对编程</li>
+<li>DevOps</li>
+<li>DDD 领域驱动设计</li>
+<li>TDD  测试驱动开发</li>
+</ul>
+<h1 id="招聘流程">招聘流程</h1>
+<h2 id="1线上测评05h性格测评">1.线上测评(0.5h)+性格测评</h2>
+<h3 id="行测题目">行测题目</h3>
+<ol>
+<li>文字主旨/推理 * 10</li>
+<li>图表题 * 11</li>
+<li>图形规律 * 9</li>
+<li>98题，性格测评，时间充足。</li>
+</ol>
+<p><strong>声明：好好作答，这部分测试也会挂人，不要以为不重要。</strong></p>
+<h2 id="2技术测评2h面试05h">2.技术测评(2h)+面试(0.5h)</h2>
+<p>一道综合大题，时间2小时，共三问，不强求AC，但需要方案及实现过程</p>
+<p><strong>划重点：不要切屏，不要切屏，不要切屏</strong></p>
+<ol>
+<li>保持在题目界面不要离开，</li>
+<li>视作离开的情况：
+<ol>
+<li>点击底部栏(第一次我关网xx音乐，账号作废</li>
+<li>切换到另一个网页(第二次收到邮件，手贱切了下，账号又作废了)</li>
+</ol>
+</li>
+<li>多准备几张干净的草稿纸(需要拍照转word或者pdf)</li>
+</ol>
+<p>tips:</p>
+<ol>
+<li>切屏账号自动作废，很麻烦，可以向账号提供商要一个。（我那天换了三个号</li>
+<li>如果收件箱没有邮件，一定是被归到广告（垃圾）邮件去了。</li>
+</ol>
+<h3 id="具体要求">具体要求</h3>
+<ol>
+<li>写出所有方案</li>
+<li>比较所有方案的优缺点</li>
+<li>探测案例方案的选择和测试用例</li>
+</ol>
+<h3 id="面试环节">面试环节</h3>
+<p>面试之前，我又重新用画图软件将我方案的实现思路、流程图和所有(3种)方案画了出来。</p>
+<p>面试首先是一个简短的自我介绍，然乎直奔主题。</p>
+<p>然后我用的投屏，让面试官看我的桌面，我用做好的图片给面试官讲解思路。</p>
+<p>首先是整体思路，先讲怎么做，再讲为什么，然后分析了各种方案的优缺点及实现难度，将一个东西拆分成多个，然后以模块化思想，进行复用；还有几种方案之间的依赖关系，如何选择合适的方案。</p>
+<p>面试官提了两个问题：</p>
+<p>​	1.一句话总结你的方案：</p>
+<p>​		我的回答：拆分、组合、复用</p>
+<p>​	2.你需要多久能实现你的方案，可能会遇到什么问题？</p>
+<p>​		根据自己的思路作答即可</p>
+<p>面完之后，面试官会问你有什么想问你的，我问了tw实习生的暑期实习会做些什么，同时表明了强烈的想去tw(tw实习开启后，秒投简历)。</p>
+<h3 id="面试感觉">面试感觉</h3>
+<p>这次面试的感觉很棒，跟以往的不一样(中大公司就问你简历上写的基础，我实在记不住那么多)。试我的是一个资深软件工程师(15年工作经验)，刚开始自我介绍有点紧张，深呼吸了下，面试官也很亲切的笑笑，示意我不用紧张。tw的面试不同以往的技术面，它从一个题目考察你的方案能力，项目分析、项目优化的能力，我个人还是比较享受这种面试的。</p>
+<h3 id="小插曲">小插曲</h3>
+<p>这次面试完，我的状态先是由面试预约中变为线上测试(搞得我好慌，以为面试凉了)，然后过了两天又从线上测试变为面试预约，又过了一天，收到hr电话。</p>
+<p>没有收到明确的感谢信之前，都没有凉（凉了会收到tw的感谢信）</p>
+<h2 id="3动机测试25min职业性格测试25min">3.动机测试(25min)+职业性格测试(25min)</h2>
+<p>hr会发送做题链接的邮件，在规定时间内完成。测评也要好好答题，虽然不会挂，但hr可能会根据测评结果评估你是否符合公司。</p>
+<h2 id="4u加面45min">4.u加面（45min）</h2>
+<blockquote>
+<p>两面试官问技术，hr估计在笔记（全程没提问）</p>
+</blockquote>
+<h3 id="1自我介绍">1.自我介绍</h3>
+<h3 id="2大学哪门课程带给你很大的帮助">2.大学哪门课程带给你很大的帮助</h3>
+<h3 id="3项目面">3.项目面</h3>
+<h4 id="1项目分工">1.项目分工</h4>
+<h4 id="2自己承担的职位">2.自己承担的职位</h4>
+<h4 id="3项目难点如何解决">3.项目难点，如何解决</h4>
+<p>我提到了跨域问题，并说了跨域问题的解决，还有一些团队开发过程中沟通的问题。</p>
+<p>面试官：为什么浏览器会禁止跨域</p>
+<p>我：emmmm，忘了</p>
+<h4 id="4项目技术选型">4.项目技术选型：</h4>
+<p>自己选的还是怎么选的？为什么这么选？</p>
+<p>有和团队成员沟通过技术选型的问题吗？</p>
+<h3 id="提问">提问：</h3>
+<h5 id="公司对实习生有一个什么期望">公司对实习生有一个什么期望？</h5>
+<p>快速学习的能力，适应环境</p>
+<h5 id="你对我今天的面试有什么评价或者建议">你对我今天的面试，有什么评价或者建议？</h5>
+<p>改变应试教育的思维。工作不是考试，没有固定的答案，没有题库给你刷到高分。会遇到许多未知问题。</p>
+<p>学习一些人文、社会学、心理学的东西。学会与周围的环境沟通交流。</p>
+<h1 id="时间线">时间线</h1>
+<h2 id="2021届暑假实习">2021届暑假实习</h2>
+<p>3-16：实习招聘开始：投递简历</p>
+<p>3-16：收到在线测评邮件，完成测评</p>
+<p>3-20：收到面试预约邮件，完成预约</p>
+<p>3-27：收到面试预约成功的邮件，并确定了调整的面试时间</p>
+<p>4-6：收到远程面试邀请邮件</p>
+<p>4-8：收到技术测评邮件和答案提交的邮件</p>
+<p>4-9：技术测评</p>
+<p>4-10：陈述技术测评方案</p>
+<p>4-15：接到hr的电话，完成动机测试和性格测试，加了hr好友</p>
+<p>4-16：hr通知下周一面试，发送邮件告知详细时间还有ZoomID</p>
+<p>4-20：u加面</p>
+<p>面试结果需等一周</p>
+<h1 id="可参考的帖子">可参考的帖子</h1>
+<ul>
+<li><a href="https://www.nowcoder.com/discuss/395229">2020届春招面经之ThoughtWorks—软件开发工程师</a></li>
+<li><a href="https://www.nowcoder.com/discuss/15668">写一拨ThoughtWorks面经</a></li>
+<li><a href="https://www.nowcoder.com/discuss/33839">ThoughtWorks面试经历，干货满满</a></li>
+<li><a href="https://www.nowcoder.com/discuss/90639">ThoughtWork软开（成都）面试</a></li>
+<li><a href="https://www.nowcoder.com/discuss/91874">ThoughtWorks面经</a></li>
+<li><a href="https://www.nowcoder.com/discuss/92270">武汉Thoughtworks软开面经【已给offer】</a></li>
+<li><a href="https://www.nowcoder.com/discuss/93326">thoughtworks面经（offer已拿）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/96929">thoughtWorks面经（刚收到offer）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/151667">ThoughtWorks java开发18年秋招笔试题</a></li>
+<li><a href="https://www.nowcoder.com/discuss/152333">【ThoughtWorks内推】BA面经（已拿offer）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/220821">thoughtworks凉经，C++(成都)</a></li>
+<li><a href="https://www.nowcoder.com/discuss/223009">thoughtworks面经，软开(西安)</a></li>
+<li><a href="https://www.nowcoder.com/discuss/223445">ThoughtWorks面试经历（武汉）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/227643">Thoughtworks国际岗软开（非计算机专业）面经-西安</a></li>
+<li><a href="https://www.nowcoder.com/discuss/240371">2020秋招面经大汇总（ThoughtWorks）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/246188">Thoughtworks面经分享</a></li>
+<li><a href="https://www.nowcoder.com/discuss/248128">Thoughtworks面经 感觉凉</a></li>
+<li><a href="https://www.nowcoder.com/discuss/395229">2020届春招面经之ThoughtWorks—软件开发工程师</a></li>
+<li><a href="https://www.nowcoder.com/discuss/406227">ThoughtWorks面经（非计软件开发base西安）</a></li>
+<li><a href="https://www.nowcoder.com/discuss/411993?type=post&amp;order=time&amp;pos=&amp;page=1&amp;subType=2">Thoughtworks2021届暑期实习面经 </a></li>
+<li><a href="https://www.nowcoder.com/discuss/373028?type=2">还愿thoughtworks(已拿offer）附个人面经</a></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[设计模式6大设计原则]]></title>
+        <id>https://wwtttt.github.io/post/ltnXWbiib/</id>
+        <link href="https://wwtttt.github.io/post/ltnXWbiib/">
+        </link>
+        <updated>2020-04-13T10:22:31.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="6大设计原则">6大设计原则</h1>
+<h2 id="单一职责原则">单一职责原则</h2>
+<p><code>Single Responsibility Principle</code>简称<code>SRP</code></p>
+<h3 id="定义">定义</h3>
+<p>​	应该<code>有且仅有一个</code>原因引起<code>类的变更</code>。</p>
+<h3 id="好处">好处</h3>
+<ul>
+<li>类的复杂性降低，实现什么职责都有清晰明确的定义；</li>
+<li>可读性提高，复杂性降低，那当然可读性提高了；</li>
+<li>可维护性提高，可读性提高，那当然更容易维护了；</li>
+<li>变更引起的风险降低，变更是必不可少的，如果接口的单一职责做得好，一个接口修改只对相应的实现类有影响，对其他的接口无影响，这对系统的扩展性、维护性都有非常大的帮助。</li>
+</ul>
+<h3 id="适用范围">适用范围</h3>
+<ul>
+<li>适用于接口、类，同时也适用于方法</li>
+</ul>
+<h3 id="实例">实例</h3>
+<p>修改用户信息<code>void changeUser(IUserBO, UserBO, String..changeOpyions)</code>,根据传递的类型不同，把可变长度参数changeOptions修改到userBO这个对象上，并调用持久层的方法保存到数据库中</p>
+<p>拆分为</p>
+<ul>
+<li><code>void changeUserName(String username)</code></li>
+<li><code>void changeHomeAddress(String homeaddress)</code></li>
+<li><code>void changeOfficeTel(String officetel)</code></li>
+</ul>
+<p><code>changeUser</code>方法职责不清晰，不单一;拆分成许多接口，每个方法的职责非常清晰明确，不仅开发简单，而且日后的维护也非常容易</p>
+<h2 id="里氏替换原则">里氏替换原则</h2>
+<p><code>Liskov SubstitutionPrinciple</code>----<code>LSP</code></p>
+<h3 id="继承">继承</h3>
+<h4 id="优点">优点</h4>
+<ul>
+<li>代码共享，减少创建类的工作量，每个子类都拥有父类的方法和属性；</li>
+<li>提高代码的重用性；</li>
+<li>子类可以形似父类，但又异于父类，“龙生龙，凤生凤，老鼠生来会打洞”是说子拥有父的“种”，“世界上没有两片完全相同的叶子”是指明子与父的不同；</li>
+<li>提高代码的可扩展性，实现父类的方法就可以“为所欲为”了，君不见很多开源框架的扩展接口都是通过继承父类来完成的；</li>
+<li>提高产品或项目的开放性。</li>
+</ul>
+<h4 id="缺点">缺点</h4>
+<ul>
+<li>继承是侵入性的。只要继承，就必须拥有父类的所有属性和方法；</li>
+<li>降低代码的灵活性。子类必须拥有父类的属性和方法，让子类自由的世界中多了些约束；</li>
+<li>增强了耦合性。当父类的常量、变量和方法被修改时，需要考虑子类的修改，而且在缺乏规范的环境下，这种修改可能带来非常糟糕的结果——大段的代码需要重构。</li>
+</ul>
+<h3 id="定义-2">定义</h3>
+<ul>
+<li>第一种定义，也是最正宗的定义：If for each object o1 of type S there is an object o2 oftype T such that for all programs P defined in terms of T,the behavior of P is unchangedwhen o1 is substituted for o2 then S is a subtype of T.（如果对每一个类型为S的对象o1，都有类型为T的对象o2，使得以T定义的所有程序P在所有的对象o1都代换成o2时，程序P的行为没有发生变化，那么类型S是类型T的子类型。）</li>
+<li>第二种定义：Functions that use pointers or references to base classes must be able touse objects of derived classes without knowing it.（所有引用基类的地方必须能透明地使用其子类的对象。）</li>
+<li>第二个定义是最清晰明确的，通俗点讲，只要父类能出现的地方子类就可以出现，而且替换为子类也不会产生任何错误或异常，使用者可能根本就不需要知道是父类还是子类。但是，反过来就不行了，有子类出现的地方，父类未必就能适应。</li>
+</ul>
+<h3 id="含义">含义</h3>
+<ul>
+<li>1.子类必须完全实现父类的方法</li>
+<li>2.子类可以有自己的个性</li>
+<li>3.覆盖或实现父类的方法时输入参数可以被放大</li>
+<li>4.覆写或实现父类的方法时输出结果可以被缩小</li>
+</ul>
+<h3 id="优点-2">优点</h3>
+<p>采用里氏替换原则的目的就是增强程序的健壮性，版本升级时也可以保持非常好的兼容性。即使增加子类，原有的子类还可以继续运行。在实际项目中，每个子类对应不同的业务含义，使用父类作为参数，传递不同的子类完成不同的业务逻辑，非常完美！</p>
+<h2 id="依赖倒置原则">依赖倒置原则</h2>
+<p><code>Dependence Inversion Principle</code>------<code>DIP</code></p>
+<h3 id="定义-3">定义</h3>
+<p><code>High level modules should not depend upon low level modules.Both should dependupon abstractions.Abstractions should not depend upon details.Details should dependupon abstractions.</code></p>
+<ul>
+<li>模块间的依赖通过抽象发生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的；</li>
+<li>接口或抽象类不依赖于实现类；</li>
+<li>实现类依赖接口或抽象类。</li>
+<li>更加精简的定义就是“面向接口编程”——OOD（Object-Oriented Design，面向对象设计）的精髓之一。</li>
+</ul>
+<h3 id="优点-3">优点</h3>
+<p>可以减少类间的耦合性，提高系统的稳定性，降低并行开发引起的风险，提高代码的可读性和可维护性。</p>
+<h3 id="应用">应用</h3>
+<p>TDD（Test-Driven Development，测试驱动开发）开发模式</p>
+<h3 id="依赖的三种写法">依赖的三种写法</h3>
+<ul>
+<li>1.构造函数传递依赖对象</li>
+<li>2.Setter方法传递依赖对象</li>
+<li>3.接口声明依赖对象</li>
+</ul>
+<h3 id="最佳实践">最佳实践</h3>
+<ul>
+<li>每个类尽量都有接口或抽象类，或者抽象类和接口两者都具备</li>
+<li>变量的表面类型尽量是接口或者是抽象类</li>
+<li>任何类都不应该从具体类派生</li>
+<li>尽量不要覆写基类的方法</li>
+<li>结合里氏替换原则使用</li>
+</ul>
+<h2 id="接口隔离原则">接口隔离原则</h2>
+<h2 id="接口类型">接口类型</h2>
+<h4 id="实例接口">实例接口</h4>
+<p>实例接口（Object Interface），在Java中声明一个类，然后用new关键字产生一个实例，它是对一个类型的事物的描述，这是一种接口。比如你定义Person这个类，然后使用PersonzhangSan=new Person()产生了一个实例，这个实例要遵从的标准就是Person这个类，Person类就是zhangSan的接口。</p>
+<p><code>java类就是一个接口</code></p>
+<h4 id="类接口">类接口</h4>
+<p>Java中经常使用的<code>interface</code>关键字定义的接口</p>
+<h2 id="隔离">隔离</h2>
+<ul>
+<li>
+<p>Clients should not be forced to depend upon interfaces that they don't use.（客户端不应该依赖它不需要的接口。）</p>
+</li>
+<li>
+<p>The dependency of one class to another one should depend on the smallest possibleinterface.（类间的依赖关系应该建立在最小的接口上。）</p>
+</li>
+<li>
+<p>建立单一接口，不要建立臃肿庞大的接口</p>
+</li>
+<li>
+<p>接口尽量细化，同时接口中的方法尽量少。</p>
+</li>
+</ul>
+<h3 id="与单一职责原则的联系">与单一职责原则的联系</h3>
+<p>接口隔离原则与单一职责的审视角度是不相同的，单一职责要求的是<code>类和接口职责单一</code>，注重的是职责，这是<code>业务逻辑上</code>的划分，而接口隔离原则要求接口的方法尽量少。例如一个接口的职责可能包含10个方法，这10个方法都放在一个接口中，并且提供给多个模块访问，各个模块按照规定的权限来访问，在系统外通过文档约束“不使用的方法不要访问”，按照单一职责原则是允许的，按照接口隔离原则是不允许的，因为它要求“尽量使用多个专门的接口”。专门的接口指什么？就是指提供给每个模块的都应该是单一接口，提供给几个模块就应该有几个接口，而不是建立一个庞大的臃肿的接口，容纳所有的客户端访问。</p>
+<h3 id="规范约束">规范约束</h3>
+<ul>
+<li>接口要尽量小,但<code>不能违反单一职责原则</code></li>
+<li>接口要高内聚</li>
+<li>定制服务</li>
+</ul>
+<h2 id="迪米特法原则">迪米特法原则</h2>
+<p>迪米特法则（Law of Demeter，LoD）也称为最少知识原则（Least Knowledge Principle，LKP）</p>
+<h3 id="规则">规则</h3>
+<p>一个对象应该对其他对象有最少的了解。通俗地讲，一个类应该对自己需要耦合或调用的类知道得最少，你（被耦合或调用的类）的内部是如何复杂都和我没关系，那是你的事情，我就知道你提供的这么多public方法，我就调用这么多，其他的我一概不关心。</p>
+<h3 id="含义-2">含义</h3>
+<ul>
+<li>只和朋友交流</li>
+<li>朋友间也是有距离的</li>
+<li>是自己的就是自己的</li>
+<li>谨慎使用Serializable</li>
+</ul>
+<h2 id="开闭原则">开闭原则</h2>
+<h3 id="定义-4">定义</h3>
+<p>Software entities like classes,modules and functions should be open for extension butclosed for modifications.（一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。）</p>
+<ul>
+<li>软件实体应该对扩展开放，对修改关闭，其含义是说一个软件实体应该通过扩展来实现变化，而不是通过修改已有的代码来实现变化。</li>
+</ul>
+<p>软件实体</p>
+<ul>
+<li>项目或软件产品中按照一定的逻辑规则划分的模块。</li>
+<li>抽象和类。</li>
+<li>方法。</li>
+</ul>
+<h3 id="为什么要采用开闭原则">为什么要采用开闭原则</h3>
+<ul>
+<li>开闭原则对测试的影响</li>
+<li>开闭原则可以提高复用性</li>
+<li>开闭原则可以提高可维护性</li>
+<li>面向对象开发的要求</li>
+</ul>
+<h3 id="如何使用开闭原则">如何使用开闭原则</h3>
+<ul>
+<li>抽象约束</li>
+<li>元数据（metadata）控制模块行为</li>
+<li>制定项目章程</li>
+<li>封装变化</li>
+</ul>
+<h3 id="使用注意事项">使用注意事项</h3>
+<ul>
+<li>开闭原则也只是一个原则</li>
+<li>项目规章非常重要</li>
+<li>预知变化，拥抱变化</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[线程-进程-协程]]></title>
+        <id>https://wwtttt.github.io/post/M7awoMKbc/</id>
+        <link href="https://wwtttt.github.io/post/M7awoMKbc/">
+        </link>
+        <updated>2020-03-03T10:41:17.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>Python中因为有GIL(全局解释器锁)的存在，例如，某个线程想要执行，必须先拿到GIL，我们可以把GIL看作“通行证”，并且在一个Python进程中，GIL只有一个。拿不到通行证的线程就不允许进入CPU执行。每次释放GIL锁，线程之间都会进行锁竞争，而切换线程会消耗资源。由于GIL锁的存在，Python里一个进程永远只能同时执行一个线程（拿到GIL的线程才能执行），这就是在多核CPU上Python的多线程效率不高的原因。</p>
+<p>Python的多线程对于IO密集型代码比较友好，网络爬虫能够在获取网页的过程中使用多线程，从而加快速度。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多线程</td>
+<td>Python的多线程对于IO密集型代码比较友好</td>
+<td>多核CPU上Python的多线程效率不高</td>
+<td>IO密集</td>
+</tr>
+<tr>
+<td>多进程</td>
+<td>提升对多核性能的利用</td>
+<td>太消耗资源</td>
+<td></td>
+</tr>
+<tr>
+<td>协程</td>
+<td>1.协程像一种在程序级别模拟系统级别的进程，由于是单线程，并且少了上下文切换，因此相对来说系统消耗很少，而且网上的各种测试也表明协程确实拥有惊人的速度。       2.协程方便切换控制流，这就简化了编程模型。协程能保留上一次调用时的状态（所有局部状态的一个特定组合），每次过程重入时，就相当于进入了上一次调用的状态。     3.协程的高扩展性和高并发性，一个CPU支持上万协程都不是问题，所以很适合用于高并发处理。</td>
+<td>1.协程的本质是一个单线程，不能同时使用单个CPU的多核，需要和进程配合才能运行在多CPU上。         2.有长时间阻塞的IO操作时不要用协程，因为可能会阻塞整个程序。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="爬虫">爬虫</h2>
+<p>0.单线程</p>
+<p>1.基于_thread的多线程</p>
+<p>2.基于threading的多线程</p>
+<p>3.基于threading+Queue的多线程</p>
+<p>4.基于Process + Queue的multiprocess多进程</p>
+<p>5.基于Pool +Queue的multiprocess多进程</p>
+<p>6.基于gevent的多协程</p>
+<p>7.基于aiohttp的多协程</p>
+<p>8.grequests</p>
+<blockquote>
+<p>Requests + Gevent = ❤️ https://pypi.python.org/pypi/grequests</p>
+</blockquote>
+<p>9.多线程+协程组合</p>
 ]]></content>
     </entry>
 </feed>
