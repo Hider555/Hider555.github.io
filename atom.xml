@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwtttt.github.io</id>
     <title>Wade</title>
-    <updated>2020-04-26T11:09:35.207Z</updated>
+    <updated>2020-04-26T11:16:34.649Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwtttt.github.io"/>
     <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
@@ -10,160 +10,6 @@
     <logo>https://wwtttt.github.io/images/avatar.png</logo>
     <icon>https://wwtttt.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Wade</rights>
-    <entry>
-        <title type="html"><![CDATA[2020年TW暑假实习面经]]></title>
-        <id>https://wwtttt.github.io/post/T7eTK-84z/</id>
-        <link href="https://wwtttt.github.io/post/T7eTK-84z/">
-        </link>
-        <updated>2020-04-26T10:49:54.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h1 id="了解思特沃克">了解思特沃克</h1>
-<h2 id="简介">简介</h2>
-<p>ThoughtWorks是一家全球软件设计与定制领袖企业，ThoughtWorks的业务模式主要通过咨询帮助改善企业的IT组织，改进软件开发方法，以软件带动企业业务发展。ThoughtWorks<strong>并非一家劳动密集型企业，不以人才扩张为支撑业务发展</strong>的基础。ThoughtWorks以发展<strong>高、精、尖</strong>的创新业务设计和创意咨询为主要业务内容，以高端人才带动整个产业的理念革新和方法进步，促进整个产业链的健康生态循环。ThoughtWorks服务的客户重视软件开发方法，重视软件对业务发展至关重要的作用；鼓励创意设计，寻求创新的业务模式以占据企业翘楚。通过定制软件开发，ThoughtWorks为客户提供集创意设计、开发及交付为一体的定制服务。</p>
-<h2 id="工作地点">工作地点</h2>
-<ul>
-<li>北京</li>
-<li>上海</li>
-<li>深圳</li>
-<li>武汉</li>
-<li>成都</li>
-<li>西安</li>
-</ul>
-<h2 id="岗位">岗位</h2>
-<ul>
-<li>PM	产品经理</li>
-<li>Dev   软件开发人员</li>
-<li>BA	业务需求分析师，承接某个具体业务需求的产品经理就叫BA</li>
-<li>QA	在软件开发过程中做好软件质量分析和保证的人员</li>
-<li>UX	用户体验人员</li>
-<li>UT	单元测试</li>
-</ul>
-<h2 id="官方技术网站">官方技术网站</h2>
-<ul>
-<li><a href="https://insights.thoughtworks.cn/">ThoughtWorks洞见</a>（微信公众号:ThoughtWorks洞见）</li>
-</ul>
-<h2 id="开发模式">开发模式</h2>
-<ul>
-<li>敏捷(Scrum+XP)开发</li>
-<li>结对编程</li>
-<li>DevOps</li>
-<li>DDD 领域驱动设计</li>
-<li>TDD  测试驱动开发</li>
-</ul>
-<h1 id="招聘流程">招聘流程</h1>
-<h2 id="1线上测评05h性格测评">1.线上测评(0.5h)+性格测评</h2>
-<h3 id="行测题目">行测题目</h3>
-<ol>
-<li>文字主旨/推理 * 10</li>
-<li>图表题 * 11</li>
-<li>图形规律 * 9</li>
-<li>98题，性格测评，时间充足。</li>
-</ol>
-<p><strong>声明：好好作答，这部分测试也会挂人，不要以为不重要。</strong></p>
-<h2 id="2技术测评2h面试05h">2.技术测评(2h)+面试(0.5h)</h2>
-<p>一道综合大题，时间2小时，共三问，不强求AC，但需要方案及实现过程</p>
-<p><strong>划重点：不要切屏，不要切屏，不要切屏</strong></p>
-<ol>
-<li>保持在题目界面不要离开，</li>
-<li>视作离开的情况：
-<ol>
-<li>点击底部栏(第一次我关网xx音乐，账号作废</li>
-<li>切换到另一个网页(第二次收到邮件，手贱切了下，账号又作废了)</li>
-</ol>
-</li>
-<li>多准备几张干净的草稿纸(需要拍照转word或者pdf)</li>
-</ol>
-<p>tips:</p>
-<ol>
-<li>切屏账号自动作废，很麻烦，可以向账号提供商要一个。（我那天换了三个号</li>
-<li>如果收件箱没有邮件，一定是被归到广告（垃圾）邮件去了。</li>
-</ol>
-<h3 id="具体要求">具体要求</h3>
-<ol>
-<li>写出所有方案</li>
-<li>比较所有方案的优缺点</li>
-<li>探测案例方案的选择和测试用例</li>
-</ol>
-<h3 id="面试环节">面试环节</h3>
-<p>面试之前，我又重新用画图软件将我方案的实现思路、流程图和所有(3种)方案画了出来。</p>
-<p>面试首先是一个简短的自我介绍，然乎直奔主题。</p>
-<p>然后我用的投屏，让面试官看我的桌面，我用做好的图片给面试官讲解思路。</p>
-<p>首先是整体思路，先讲怎么做，再讲为什么，然后分析了各种方案的优缺点及实现难度，将一个东西拆分成多个，然后以模块化思想，进行复用；还有几种方案之间的依赖关系，如何选择合适的方案。</p>
-<p>面试官提了两个问题：</p>
-<p>​	1.一句话总结你的方案：</p>
-<p>​		我的回答：拆分、组合、复用</p>
-<p>​	2.你需要多久能实现你的方案，可能会遇到什么问题？</p>
-<p>​		根据自己的思路作答即可</p>
-<p>面完之后，面试官会问你有什么想问你的，我问了tw实习生的暑期实习会做些什么，同时表明了强烈的想去tw(tw实习开启后，秒投简历)。</p>
-<h3 id="面试感觉">面试感觉</h3>
-<p>这次面试的感觉很棒，跟以往的不一样(中大公司就问你简历上写的基础，我实在记不住那么多)。试我的是一个资深软件工程师(15年工作经验)，刚开始自我介绍有点紧张，深呼吸了下，面试官也很亲切的笑笑，示意我不用紧张。tw的面试不同以往的技术面，它从一个题目考察你的方案能力，项目分析、项目优化的能力，我个人还是比较享受这种面试的。</p>
-<h3 id="小插曲">小插曲</h3>
-<p>这次面试完，我的状态先是由面试预约中变为线上测试(搞得我好慌，以为面试凉了)，然后过了两天又从线上测试变为面试预约，又过了一天，收到hr电话。</p>
-<p>没有收到明确的感谢信之前，都没有凉（凉了会收到tw的感谢信）</p>
-<h2 id="3动机测试25min职业性格测试25min">3.动机测试(25min)+职业性格测试(25min)</h2>
-<p>hr会发送做题链接的邮件，在规定时间内完成。测评也要好好答题，虽然不会挂，但hr可能会根据测评结果评估你是否符合公司。</p>
-<h2 id="4u加面45min">4.u加面（45min）</h2>
-<blockquote>
-<p>两面试官问技术，hr估计在笔记（全程没提问）</p>
-</blockquote>
-<h3 id="1自我介绍">1.自我介绍</h3>
-<h3 id="2大学哪门课程带给你很大的帮助">2.大学哪门课程带给你很大的帮助</h3>
-<h3 id="3项目面">3.项目面</h3>
-<h4 id="1项目分工">1.项目分工</h4>
-<h4 id="2自己承担的职位">2.自己承担的职位</h4>
-<h4 id="3项目难点如何解决">3.项目难点，如何解决</h4>
-<p>我提到了跨域问题，并说了跨域问题的解决，还有一些团队开发过程中沟通的问题。</p>
-<p>面试官：为什么浏览器会禁止跨域</p>
-<p>我：emmmm，忘了</p>
-<h4 id="4项目技术选型">4.项目技术选型：</h4>
-<p>自己选的还是怎么选的？为什么这么选？</p>
-<p>有和团队成员沟通过技术选型的问题吗？</p>
-<h3 id="提问">提问：</h3>
-<h5 id="公司对实习生有一个什么期望">公司对实习生有一个什么期望？</h5>
-<p>快速学习的能力，适应环境</p>
-<h5 id="你对我今天的面试有什么评价或者建议">你对我今天的面试，有什么评价或者建议？</h5>
-<p>改变应试教育的思维。工作不是考试，没有固定的答案，没有题库给你刷到高分。会遇到许多未知问题。</p>
-<p>学习一些人文、社会学、心理学的东西。学会与周围的环境沟通交流。</p>
-<h1 id="时间线">时间线</h1>
-<h2 id="2021届暑假实习">2021届暑假实习</h2>
-<p>3-16：实习招聘开始：投递简历</p>
-<p>3-16：收到在线测评邮件，完成测评</p>
-<p>3-20：收到面试预约邮件，完成预约</p>
-<p>3-27：收到面试预约成功的邮件，并确定了调整的面试时间</p>
-<p>4-6：收到远程面试邀请邮件</p>
-<p>4-8：收到技术测评邮件和答案提交的邮件</p>
-<p>4-9：技术测评</p>
-<p>4-10：陈述技术测评方案</p>
-<p>4-15：接到hr的电话，完成动机测试和性格测试，加了hr好友</p>
-<p>4-16：hr通知下周一面试，发送邮件告知详细时间还有ZoomID</p>
-<p>4-20：u加面</p>
-<p>面试结果需等一周</p>
-<h1 id="可参考的帖子">可参考的帖子</h1>
-<ul>
-<li><a href="https://www.nowcoder.com/discuss/395229">2020届春招面经之ThoughtWorks—软件开发工程师</a></li>
-<li><a href="https://www.nowcoder.com/discuss/15668">写一拨ThoughtWorks面经</a></li>
-<li><a href="https://www.nowcoder.com/discuss/33839">ThoughtWorks面试经历，干货满满</a></li>
-<li><a href="https://www.nowcoder.com/discuss/90639">ThoughtWork软开（成都）面试</a></li>
-<li><a href="https://www.nowcoder.com/discuss/91874">ThoughtWorks面经</a></li>
-<li><a href="https://www.nowcoder.com/discuss/92270">武汉Thoughtworks软开面经【已给offer】</a></li>
-<li><a href="https://www.nowcoder.com/discuss/93326">thoughtworks面经（offer已拿）</a></li>
-<li><a href="https://www.nowcoder.com/discuss/96929">thoughtWorks面经（刚收到offer）</a></li>
-<li><a href="https://www.nowcoder.com/discuss/151667">ThoughtWorks java开发18年秋招笔试题</a></li>
-<li><a href="https://www.nowcoder.com/discuss/152333">【ThoughtWorks内推】BA面经（已拿offer）</a></li>
-<li><a href="https://www.nowcoder.com/discuss/220821">thoughtworks凉经，C++(成都)</a></li>
-<li><a href="https://www.nowcoder.com/discuss/223009">thoughtworks面经，软开(西安)</a></li>
-<li><a href="https://www.nowcoder.com/discuss/223445">ThoughtWorks面试经历（武汉）</a></li>
-<li><a href="https://www.nowcoder.com/discuss/227643">Thoughtworks国际岗软开（非计算机专业）面经-西安</a></li>
-<li><a href="https://www.nowcoder.com/discuss/240371">2020秋招面经大汇总（ThoughtWorks）</a></li>
-<li><a href="https://www.nowcoder.com/discuss/246188">Thoughtworks面经分享</a></li>
-<li><a href="https://www.nowcoder.com/discuss/248128">Thoughtworks面经 感觉凉</a></li>
-<li><a href="https://www.nowcoder.com/discuss/395229">2020届春招面经之ThoughtWorks—软件开发工程师</a></li>
-<li><a href="https://www.nowcoder.com/discuss/406227">ThoughtWorks面经（非计软件开发base西安）</a></li>
-<li><a href="https://www.nowcoder.com/discuss/411993?type=post&amp;order=time&amp;pos=&amp;page=1&amp;subType=2">Thoughtworks2021届暑期实习面经 </a></li>
-<li><a href="https://www.nowcoder.com/discuss/373028?type=2">还愿thoughtworks(已拿offer）附个人面经</a></li>
-</ul>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[深拷贝与浅拷贝]]></title>
         <id>https://wwtttt.github.io/post/VkKLxZjqk/</id>
@@ -778,6 +624,56 @@ public class Solution {
 <p>Requests + Gevent = ❤️ https://pypi.python.org/pypi/grequests</p>
 </blockquote>
 <p>9.多线程+协程组合</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我的win10都装了什么]]></title>
+        <id>https://wwtttt.github.io/post/AyWPVhxrt/</id>
+        <link href="https://wwtttt.github.io/post/AyWPVhxrt/">
+        </link>
+        <updated>2020-02-27T11:07:29.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h2 id="开发工具">开发工具</h2>
+<ul>
+<li>Interlij IDEA</li>
+<li>Pycharm</li>
+<li>Maven</li>
+<li>Tomcat</li>
+<li>Git</li>
+<li>Robo3t</li>
+<li>Navicat</li>
+<li>Sublime</li>
+<li>Redis Manager</li>
+</ul>
+<p>数据库</p>
+<ul>
+<li>MySQL</li>
+<li>Redis</li>
+<li>MongoDB</li>
+</ul>
+<h2 id="语言环境">语言环境</h2>
+<ul>
+<li>JDK 1.8+</li>
+<li>Python3.6+</li>
+</ul>
+<h2 id="测试工具">测试工具</h2>
+<ul>
+<li>postman</li>
+</ul>
+<h2 id="其他">其他</h2>
+<ul>
+<li>VirtualBox</li>
+<li>Typora</li>
+<li>百度网盘</li>
+<li>Telegram</li>
+<li>Snipaste</li>
+<li>Xmind</li>
+<li>Xshell</li>
+<li>MobaXterm</li>
+<li>谷歌浏览器</li>
+<li>kxsw工具包</li>
+<li>极速PDF阅读器</li>
+</ul>
 ]]></content>
     </entry>
 </feed>
