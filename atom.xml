@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwtttt.github.io</id>
     <title>Wade</title>
-    <updated>2020-05-01T14:16:27.088Z</updated>
+    <updated>2020-05-02T01:21:17.126Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwtttt.github.io"/>
     <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
@@ -643,123 +643,6 @@ public class Solution {
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[二进制总结]]></title>
-        <id>https://wwtttt.github.io/post/asdada/</id>
-        <link href="https://wwtttt.github.io/post/asdada/">
-        </link>
-        <updated>2020-02-07T10:18:30.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="1编码">1.编码</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left"></th>
-<th style="text-align:left">正数</th>
-<th style="text-align:left">负数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">原码</td>
-<td style="text-align:left">0本体</td>
-<td style="text-align:left">1本体</td>
-</tr>
-<tr>
-<td style="text-align:left">补码</td>
-<td style="text-align:left">0本体</td>
-<td style="text-align:left">按位取反+1(符号位始终为1)</td>
-</tr>
-<tr>
-<td style="text-align:left">反码</td>
-<td style="text-align:left">0本体</td>
-<td style="text-align:left">按位取反(符号位始终为1)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="2分类">2.分类</h2>
-<h5 id="有符号">有符号:</h5>
-<h5 id="无符号">无符号:</h5>
-<h2 id="3-位运算">3. 位运算</h2>
-<h4 id="31-与-或-异或">3.1 与 、或、异或</h4>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>与(&amp;)</td>
-<td>0&amp;0=0</td>
-<td>1&amp;0=0</td>
-<td>1&amp;1=1</td>
-</tr>
-<tr>
-<td>或(|)</td>
-<td>0|0=0</td>
-<td>0|1=1</td>
-<td>1|1=1</td>
-</tr>
-<tr>
-<td>异或(^)</td>
-<td>0^0=0</td>
-<td>1^0=1</td>
-<td>1^1=0</td>
-</tr>
-</tbody>
-</table>
-<h4 id="32-左移">3.2 左移</h4>
-<h6 id="mn">m&lt;&lt;n</h6>
-<p>表示把m左移n位。往左移n位的时候，最左边的n位将被丢弃，同时在最右边补上n个0.</p>
-<p>exp：</p>
-<p>00<u><strong>001010</strong></u>&lt;&lt;2=<u><strong>001010</strong></u>00</p>
-<p>100**<u>01010</u><strong>&lt;&lt;3=</strong><u>01010</u>**000</p>
-<h4 id="33-右移">3.3 右移</h4>
-<h6 id="mn-2">m&gt;&gt;n</h6>
-<p>表示把m右移n位。往右移的时候，最右边的n位将被丢弃。</p>
-<p>如果数字之前是一个正数，则右移之后在最左边补n个0；</p>
-<p>如果数字之前是一个负数，则右移之后在最左边补n个1.</p>
-<p>exp:</p>
-<p><u><strong>000010</strong></u>10&gt;&gt;2=00<u><strong>000010</strong></u></p>
-<p><u><strong>10001</strong></u>010&gt;&gt;3=111<u><strong>10001</strong></u></p>
-<h4 id="34-应用">3.4 应用</h4>
-<h5 id="341-移位运算代替乘除法">3.4.1 移位运算代替乘除法</h5>
-<h5 id="342-右移一位-除以2">3.4.2 右移一位 == 除以2</h5>
-<h5 id="343-左移一位-乘以2">3.4.3 左移一位 == 乘以2</h5>
-<h6 id="二进制中1的个数">二进制中1的个数</h6>
-<pre><code class="language-cpp">int NumberOf1(int n)
-{
-    int count = 0;
-    while(n)
-    {
-        ++count;
-        n = (n-1) &amp; n;
-    }
-    return count;
-}
-
-</code></pre>
-<h6 id="不用加减法做加法">不用加减法做加法</h6>
-<pre><code class="language-cpp">int Add(int num1,int num2)
-{
-    int sum,carry;
-    do
-    {
-        sum = num1 ^ num2;
-        carry = (num1 &amp; num2) &lt;&lt; 1;
-        num1 = sum;
-        num2 = carry;
-    }
-    while(num2 !=0 );
-    
-    return num1;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[git-clone加速]]></title>
         <id>https://wwtttt.github.io/post/git-clone-jia-su/</id>
         <link href="https://wwtttt.github.io/post/git-clone-jia-su/">
@@ -840,6 +723,48 @@ print(sorted(random,key=lambda x:x[1]))//[(4, 1), (2, 2), (1, 3), (3, 4)]
 print(random)//[(2, 2), (3, 4), (4, 1), (1, 3)]
 </code></pre>
 <p>sorted(list)排序完生成一个新的list，原始list并未改变</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LeetCode cpp代码缩减runtime]]></title>
+        <id>https://wwtttt.github.io/post/EuStR3pqe/</id>
+        <link href="https://wwtttt.github.io/post/EuStR3pqe/">
+        </link>
+        <updated>2019-10-11T10:45:35.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>在leetcode第11题看到一个题解，添加到代码前面，大幅缩减runtime</p>
+<p>代码为：</p>
+<pre><code>static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	return 0;
+}();
+</code></pre>
+<p>leetcode11题解</p>
+<pre><code>static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	return 0;
+}();
+class Solution
+{
+public:
+    int maxArea(vector&lt;int&gt; &amp;height)
+    {
+        int i = 0, j = height.size() - 1, water = 0;
+        while (i &lt; j)
+        {
+            int h = min(height[i], height[j]);
+            water = max(water, (j - i) * h);
+            while (height[i] &lt;= h &amp;&amp; i &lt; j)
+                i++;
+            while (height[j] &lt;= h &amp;&amp; i &lt; j)
+                j--;
+        }
+        return water;
+    }
+};
+</code></pre>
 ]]></content>
     </entry>
 </feed>
