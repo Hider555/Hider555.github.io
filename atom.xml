@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwtttt.github.io</id>
     <title>Wade</title>
-    <updated>2020-07-14T00:52:17.444Z</updated>
+    <updated>2020-07-14T00:52:47.301Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwtttt.github.io"/>
     <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
@@ -34,6 +34,7 @@
 <li><a href="https://mp.weixin.qq.com/s/DIdbezTsPIiok1vMr8cwhg">Shopee</a></li>
 <li>[网易雷火]</li>
 <li>[网易]</li>
+<li>[猿辅导]</li>
 </ul>
 ]]></content>
     </entry>
