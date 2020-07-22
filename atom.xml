@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwtttt.github.io</id>
     <title>Wade</title>
-    <updated>2020-07-14T00:57:00.940Z</updated>
+    <updated>2020-07-22T07:18:25.558Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwtttt.github.io"/>
     <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://wwtttt.github.io/images/avatar.png</logo>
     <icon>https://wwtttt.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Wade</rights>
+    <entry>
+        <title type="html"><![CDATA[摸鱼的时候在做什么]]></title>
+        <id>https://wwtttt.github.io/post/K1v64xajY/</id>
+        <link href="https://wwtttt.github.io/post/K1v64xajY/">
+        </link>
+        <updated>2020-07-22T07:16:36.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>我在拔胡子🙄</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[秋招公司名单]]></title>
         <id>https://wwtttt.github.io/post/9mehDQEtU/</id>
@@ -758,39 +768,6 @@ public class Solution {
 <p>5.仅将第n位置位0<code>x &amp; ( ~ ( 1 &lt;&lt; n ) )</code></p>
 <p>6.将x的最高位值第n位（含）清零<code>x &amp; ( ( 1 &lt;&lt; n ) - 1 )</code></p>
 <p>7.将第n位至第0位（含）清零<code>x &amp; ( ~ ( ( 1 &lt;&lt; ( n + 1 ) ) - 1 ) )</code></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[git-clone加速]]></title>
-        <id>https://wwtttt.github.io/post/git-clone-jia-su/</id>
-        <link href="https://wwtttt.github.io/post/git-clone-jia-su/">
-        </link>
-        <updated>2020-01-20T10:16:07.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h1 id="0-国内为什么速度会慢">0. 国内为什么速度会慢</h1>
-<ul>
-<li>github的服务器在国外</li>
-<li>gfw</li>
-</ul>
-<h1 id="解决方案">解决方案</h1>
-<blockquote>
-<p>这里就不在推荐修改dns的做法，我也尝试过，不仅麻烦，速度还是不稳定。</p>
-</blockquote>
-<!-- more -->
-<h2 id="1-拥有科学上网的能力">1. 拥有科学上网的能力</h2>
-<blockquote>
-<p>如果是计算机相关专业的学生或者软件开发人员，只会用百度，我觉得是一件很可悲的事。</p>
-</blockquote>
-<h2 id="2-配置git">2. 配置git</h2>
-<h3 id="21-配置socks5代理">2.1 配置socks5代理</h3>
-<pre><code class="language-git">git config --global http.proxy 'socks5://127.0.0.1:对应的端口号'
-git config --global http.proxy 'socks5://127.0.0.1:对应的端口号'
-</code></pre>
-<h3 id="22-取消代理">2.2 取消代理</h3>
-<pre><code class="language-git">git config --global --unset http.proxy
-git config --global --unset https.proxy
-</code></pre>
-<p>配置完之后，enjoy你的带宽跑满的愉悦。</p>
 ]]></content>
     </entry>
 </feed>
