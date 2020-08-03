@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwtttt.github.io</id>
     <title>Wade</title>
-    <updated>2020-07-29T11:06:36.453Z</updated>
+    <updated>2020-08-03T03:53:47.978Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwtttt.github.io"/>
     <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
@@ -10,187 +10,6 @@
     <logo>https://wwtttt.github.io/images/avatar.png</logo>
     <icon>https://wwtttt.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Wade</rights>
-    <entry>
-        <title type="html"><![CDATA[秋招公司名单]]></title>
-        <id>https://wwtttt.github.io/post/9mehDQEtU/</id>
-        <link href="https://wwtttt.github.io/post/9mehDQEtU/">
-        </link>
-        <updated>2020-07-14T00:42:55.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h2 id="提前批">提前批</h2>
-<ul>
-<li><a href="https://mp.weixin.qq.com/s/TjlX5DXQ3a0TPOw7xjk51w">星环科技</a></li>
-<li><a href="https://mp.weixin.qq.com/s/hT8d4BqmslZ_korGX-ckFw">网易游戏雷火</a></li>
-<li>[招银]</li>
-<li>[vivo]</li>
-<li>[字节跳动]已结束</li>
-<li><a href="https://mp.weixin.qq.com/s/uRY4PpReViTHTG9NufkMlA">科大讯飞</a></li>
-<li>[美团移动端]</li>
-<li>[百度]</li>
-<li>宁波银行</li>
-<li>广联达</li>
-</ul>
-<h2 id="正式批">正式批</h2>
-<ul>
-<li>
-<p>[bilibili] 7-20</p>
-</li>
-<li>
-<p><a href="https://mp.weixin.qq.com/s/DIdbezTsPIiok1vMr8cwhg">Shopee</a></p>
-</li>
-<li>
-<p>[网易雷火]</p>
-</li>
-<li>
-<p>[网易]</p>
-</li>
-<li>
-<p>[猿辅导]</p>
-</li>
-<li>
-<p>全志科技</p>
-</li>
-<li>
-<p>网易雷火</p>
-</li>
-<li>
-<p>网易互娱</p>
-</li>
-<li>
-<p>网易云音乐</p>
-</li>
-<li>
-<p>网易</p>
-</li>
-<li>
-<p>百度</p>
-</li>
-<li>
-<p>b站</p>
-</li>
-<li>
-<p>阿里</p>
-</li>
-<li>
-<p>腾讯</p>
-</li>
-<li>
-<p>shopee</p>
-</li>
-<li>
-<p>广联达</p>
-</li>
-<li>
-<p>联想中国</p>
-</li>
-<li>
-<p>大疆</p>
-</li>
-<li>
-<p>科大讯飞</p>
-</li>
-<li>
-<p>用友</p>
-</li>
-<li>
-<p>涂鸦智能</p>
-</li>
-<li>
-<p>竞技世界</p>
-</li>
-<li>
-<p>SmartX</p>
-</li>
-<li>
-<p>作业帮</p>
-</li>
-<li>
-<p>新东方</p>
-</li>
-<li>
-<p>跟谁学</p>
-</li>
-<li>
-<p>ThoughtWorks</p>
-</li>
-<li>
-<p>趋势科技</p>
-</li>
-<li>
-<p>TP-LINK</p>
-</li>
-<li>
-<p>OPPO</p>
-</li>
-<li>
-<p>SHEIN</p>
-</li>
-<li>
-<p>中兴</p>
-</li>
-<li>
-<p>小米</p>
-</li>
-<li>
-<p>亿联网络</p>
-</li>
-<li>
-<p>寒武纪</p>
-</li>
-<li>
-<p>旷世科技</p>
-</li>
-<li>
-<p>PingCAP</p>
-</li>
-<li>
-<p>贝壳找房</p>
-</li>
-<li>
-<p>一点资讯</p>
-</li>
-<li>
-<p>猫眼</p>
-</li>
-<li>
-<p>触宝</p>
-</li>
-<li>
-<p>映客</p>
-</li>
-<li>
-<p>东方国信</p>
-</li>
-<li>
-<p>跟谁学</p>
-</li>
-<li>
-<p>华为</p>
-</li>
-<li>
-<p>快手</p>
-</li>
-<li>
-<p>老虎证券</p>
-</li>
-<li>
-<p>小鹏汽车</p>
-</li>
-<li>
-<p>搜狐</p>
-</li>
-<li>
-<p>中电十所</p>
-</li>
-<li>
-<p>柠檬微趣</p>
-</li>
-<li>
-<p>完美世界</p>
-</li>
-</ul>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[更换pip的镜像源]]></title>
         <id>https://wwtttt.github.io/post/iZSwQC-W1/</id>
@@ -941,6 +760,48 @@ git config --global http.proxy 'socks5://127.0.0.1:对应的端口号'
 git config --global --unset https.proxy
 </code></pre>
 <p>配置完之后，enjoy你的带宽跑满的愉悦。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LeetCode cpp代码缩减runtime]]></title>
+        <id>https://wwtttt.github.io/post/EuStR3pqe/</id>
+        <link href="https://wwtttt.github.io/post/EuStR3pqe/">
+        </link>
+        <updated>2019-10-11T10:45:35.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>在leetcode第11题看到一个题解，添加到代码前面，大幅缩减runtime</p>
+<p>代码为：</p>
+<pre><code>static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	return 0;
+}();
+</code></pre>
+<p>leetcode11题解</p>
+<pre><code>static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	return 0;
+}();
+class Solution
+{
+public:
+    int maxArea(vector&lt;int&gt; &amp;height)
+    {
+        int i = 0, j = height.size() - 1, water = 0;
+        while (i &lt; j)
+        {
+            int h = min(height[i], height[j]);
+            water = max(water, (j - i) * h);
+            while (height[i] &lt;= h &amp;&amp; i &lt; j)
+                i++;
+            while (height[j] &lt;= h &amp;&amp; i &lt; j)
+                j--;
+        }
+        return water;
+    }
+};
+</code></pre>
 ]]></content>
     </entry>
 </feed>
