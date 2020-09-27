@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwtttt.github.io</id>
     <title>Wade</title>
-    <updated>2020-08-03T03:53:47.978Z</updated>
+    <updated>2020-09-27T09:22:45.221Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwtttt.github.io"/>
     <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://wwtttt.github.io/images/avatar.png</logo>
     <icon>https://wwtttt.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Wade</rights>
+    <entry>
+        <title type="html"><![CDATA[谈谈《许三观卖血记》]]></title>
+        <id>https://wwtttt.github.io/post/4li2KO-Lp/</id>
+        <link href="https://wwtttt.github.io/post/4li2KO-Lp/">
+        </link>
+        <updated>2020-09-27T08:42:46.000Z</updated>
+        <content type="html"><![CDATA[<p>最近秋招已接近末尾，闲来无事，又看起了余华的小说。</p>
+<p>《许三观卖血记》大概花了一天半快速过了一遍，文字还是一如既往的朴素，故事也好懂。讲了一个愣头青许三观通过卖血度过了一次又一次难关。里面许三观多次卖血为家庭，也挺触动我的。我小时候家里条件不好，我身体也不好，老生病，每次去医院都是先赊账，等父亲卖完藕，才攥着几张纸钞来结算医药费，每次缴纳书费都会比同学们迟一点。缺钱一度导致我没有自信，现在也是如此，每次做事前都会去思考，我当前的余额是否能支撑得起我所做之事的开销。</p>
+<p>我最近一直在思考金钱对一个人的意义，贫穷对一个人的影响。钱的多少能决定我们的快乐程度吗，能决定我们看待一件事的程度吗？我在想，中国人是不是把钱看得太重要了。从小就开始，大人的教诲就一直是“书中自有黄金屋，书中自有颜如玉”、“鲤鱼跳龙门”、“现在好好学习，以后就轻松了，能赚好多钱”。</p>
+<p>可是我一路走来，我都没感觉越来越轻松，而是感觉越来越焦虑。从中学的695，再到高中的61212，直到高考完。到了大学，一下子没了目标，周围优秀的同学很多，吸引人的东西也很多。我还记得我大学入学前的天真的想法：修双学位，年级前几。可是混到大四快毕业，我还有一门专业课挂了，成绩年级倒数，更不可能去修双学位。我记得当时大一高数挂了对我影响蛮大的，高考之前，数学都可以算是我引以为傲的学科，可是高考却考的一塌糊涂，高数也只考了二三十分。此后，我对数学产生了恐惧，它就像一个梦魇困扰着我。</p>
+<p>秋招这段时间，也准备了蛮多东西，可是每一次期望越大，失望也就越大。简历变成了玄学，面试也变成了玄学。只有部分中大公司给了笔试，寥寥几家大公司给了面试机会。我在某招聘网站做了一个学历统计，硕士：本科=3：1，其中985硕士就占了三分之一，这种竞争程度是我所没料想到的。国家为了稳就业，本科扩招，研究生扩招，导致不少高学历人才涌入就业市场。可是这个市场完全提供不了这么多与之合适的岗位，然后就变成了“大鱼吃小鱼，小鱼吃虾米，虾米吃草”。</p>
+<p>这篇有点碎碎念了，等以后有时间模仿下大师写作。比如：王小波、余华</p>
+<p>ps：以前卖血还有35元，现在献血只有一份面包+一个证书，哈哈哈，是时代的进步还是时代的退步呢</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[更换pip的镜像源]]></title>
         <id>https://wwtttt.github.io/post/iZSwQC-W1/</id>
@@ -760,48 +775,6 @@ git config --global http.proxy 'socks5://127.0.0.1:对应的端口号'
 git config --global --unset https.proxy
 </code></pre>
 <p>配置完之后，enjoy你的带宽跑满的愉悦。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LeetCode cpp代码缩减runtime]]></title>
-        <id>https://wwtttt.github.io/post/EuStR3pqe/</id>
-        <link href="https://wwtttt.github.io/post/EuStR3pqe/">
-        </link>
-        <updated>2019-10-11T10:45:35.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<p>在leetcode第11题看到一个题解，添加到代码前面，大幅缩减runtime</p>
-<p>代码为：</p>
-<pre><code>static int speedup=[](){
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	return 0;
-}();
-</code></pre>
-<p>leetcode11题解</p>
-<pre><code>static int speedup=[](){
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	return 0;
-}();
-class Solution
-{
-public:
-    int maxArea(vector&lt;int&gt; &amp;height)
-    {
-        int i = 0, j = height.size() - 1, water = 0;
-        while (i &lt; j)
-        {
-            int h = min(height[i], height[j]);
-            water = max(water, (j - i) * h);
-            while (height[i] &lt;= h &amp;&amp; i &lt; j)
-                i++;
-            while (height[j] &lt;= h &amp;&amp; i &lt; j)
-                j--;
-        }
-        return water;
-    }
-};
-</code></pre>
 ]]></content>
     </entry>
 </feed>
