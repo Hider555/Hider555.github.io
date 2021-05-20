@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwtttt.github.io</id>
     <title>Wade</title>
-    <updated>2021-02-18T08:25:11.924Z</updated>
+    <updated>2021-05-20T03:29:20.514Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwtttt.github.io"/>
     <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
-    <subtitle>wade的日常碎碎念</subtitle>
+    <subtitle>wade的日常记录</subtitle>
     <logo>https://wwtttt.github.io/images/avatar.png</logo>
     <icon>https://wwtttt.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Wade</rights>
     <entry>
         <title type="html"><![CDATA[年轻一代的希望在哪？]]></title>
-        <id>https://wwtttt.github.io/post/HYmIuk1i11/</id>
-        <link href="https://wwtttt.github.io/post/HYmIuk1i11/">
+        <id>https://wwtttt.github.io/HYmIuk1i11/</id>
+        <link href="https://wwtttt.github.io/HYmIuk1i11/">
         </link>
         <updated>2020-11-25T15:48:24.000Z</updated>
         <summary type="html"><![CDATA[<p>突然好想回去放牛，没有压力，以我的智商，只放一头，多了我也数不过来，它吃草，我就趴在牛身上睡觉，牛丢了，我也就丢了……省心</p>
@@ -54,8 +54,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[谈谈《许三观卖血记》]]></title>
-        <id>https://wwtttt.github.io/post/4li2KO-Lp/</id>
-        <link href="https://wwtttt.github.io/post/4li2KO-Lp/">
+        <id>https://wwtttt.github.io/4li2KO-Lp/</id>
+        <link href="https://wwtttt.github.io/4li2KO-Lp/">
         </link>
         <updated>2020-09-27T08:42:46.000Z</updated>
         <content type="html"><![CDATA[<p>最近秋招已接近末尾，闲来无事，又看起了余华的小说。</p>
@@ -69,8 +69,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[更换pip的镜像源]]></title>
-        <id>https://wwtttt.github.io/post/iZSwQC-W1/</id>
-        <link href="https://wwtttt.github.io/post/iZSwQC-W1/">
+        <id>https://wwtttt.github.io/iZSwQC-W1/</id>
+        <link href="https://wwtttt.github.io/iZSwQC-W1/">
         </link>
         <updated>2020-05-14T10:33:34.000Z</updated>
         <summary type="html"><![CDATA[<p>pip默认国外镜像，更换国内镜像速度会好很多</p>
@@ -87,8 +87,8 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
     </entry>
     <entry>
         <title type="html"><![CDATA[是时候该放弃百度网盘了]]></title>
-        <id>https://wwtttt.github.io/post/4KC7aNbaradsa/</id>
-        <link href="https://wwtttt.github.io/post/4KC7aNbaradsa/">
+        <id>https://wwtttt.github.io/4KC7aNbaradsa/</id>
+        <link href="https://wwtttt.github.io/4KC7aNbaradsa/">
         </link>
         <updated>2020-04-23T10:24:58.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -153,8 +153,8 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
     </entry>
     <entry>
         <title type="html"><![CDATA[我的win10都装了什么]]></title>
-        <id>https://wwtttt.github.io/post/AyWPVhxrt/</id>
-        <link href="https://wwtttt.github.io/post/AyWPVhxrt/">
+        <id>https://wwtttt.github.io/AyWPVhxrt/</id>
+        <link href="https://wwtttt.github.io/AyWPVhxrt/">
         </link>
         <updated>2020-02-27T11:07:29.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -203,8 +203,8 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
     </entry>
     <entry>
         <title type="html"><![CDATA[git-clone加速]]></title>
-        <id>https://wwtttt.github.io/post/git-clone-jia-su/</id>
-        <link href="https://wwtttt.github.io/post/git-clone-jia-su/">
+        <id>https://wwtttt.github.io/git-clone-jia-su/</id>
+        <link href="https://wwtttt.github.io/git-clone-jia-su/">
         </link>
         <updated>2020-01-20T10:16:07.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -236,8 +236,8 @@ git config --global --unset https.proxy
     </entry>
     <entry>
         <title type="html"><![CDATA[github高效搜索]]></title>
-        <id>https://wwtttt.github.io/post/1Jpk3bYDZ/</id>
-        <link href="https://wwtttt.github.io/post/1Jpk3bYDZ/">
+        <id>https://wwtttt.github.io/1Jpk3bYDZ/</id>
+        <link href="https://wwtttt.github.io/1Jpk3bYDZ/">
         </link>
         <updated>2019-08-07T10:43:30.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
