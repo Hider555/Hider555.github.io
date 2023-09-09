@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>不用加减乘除做加法 | wade&#39;s tech blog</title>
+<link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1694242182982">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="不用加减乘除做加法 | wade&#39;s tech blog - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+1.位运算
+//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+//Java
+public class Solu..." />
+    <meta name="keywords" content="算法" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wwtttt.github.io">
+  <img class="avatar" src="https://wwtttt.github.io/images/avatar.png?v=1694242182982" alt="">
+  </a>
+  <h1 class="site-title">
+    wade&#39;s tech blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WadeStack" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              不用加减乘除做加法
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-10-10
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://wwtttt.github.io/tag/ljnBLHox7d/" class="post-tag">
+                  # 算法
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <!-- more -->
+<h1 id="1位运算">1.位运算</h1>
+<pre><code class="language-java">//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+//Java
+public class Solution {
+    public int Add(int num1,int num2) {
+        while (num2!=0) {
+            int temp = num1^num2;
+            num2 = (num1&amp;num2)&lt;&lt;1;
+            num1 = temp;
+        }
+        return num1;
+    }
+}
+</code></pre>
+<pre><code class="language-c++">//C++:
+class Solution {
+public        
+    int Add(int num1, int num2)
+    {
+        return num2?Add(num1^num2,(num1&amp;num2)&lt;&lt;1):num1;
+    }
+};
+</code></pre>
+<h1 id="2汇编">2.汇编</h1>
+<pre><code class="language-assembly">//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+int add(int a, int b)
+{
+    _asm
+    {
+        MOV EAX, a
+        MOV ECX, b
+        ADD EAX, ECX
+    }
+}
+</code></pre>
+<h1 id="3自增自减">3.自增自减</h1>
+<pre><code class="language-java">//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+
+public class Solution {
+    public int Add(int num1,int num2) {
+        if(num1&gt;0){
+            while(num1--!=0)
+                num2++;
+        }
+        else if(num1&lt;0){
+            while(num1++!=0)
+                num2--;
+        }
+        return num2;
+    }
+}
+</code></pre>
+<h1 id="4通过指针">4.通过指针</h1>
+<pre><code class="language-c++">//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+
+class Solution {
+public:
+    int Add(int num1, int num2)
+    {
+        char* a = reinterpret_cast&lt;char*&gt;(num1);
+        return reinterpret_cast&lt;long&gt;(&amp;(a[num2]));
+    }
+};
+</code></pre>
+<h1 id="5通过函数">5.通过函数</h1>
+<pre><code class="language-java">public int Add(int num1, int num2) {
+   return Integer.sum(num1, num2);
+}
+</code></pre>
+<h1 id="6integersum源码">6.Integer.sum()源码</h1>
+<pre><code class="language-java">public static int sum(int a, int b) {
+        return a + b;
+}
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#1%E4%BD%8D%E8%BF%90%E7%AE%97">1.位运算</a></li>
+<li><a href="#2%E6%B1%87%E7%BC%96">2.汇编</a></li>
+<li><a href="#3%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F">3.自增自减</a></li>
+<li><a href="#4%E9%80%9A%E8%BF%87%E6%8C%87%E9%92%88">4.通过指针</a></li>
+<li><a href="#5%E9%80%9A%E8%BF%87%E5%87%BD%E6%95%B0">5.通过函数</a></li>
+<li><a href="#6integersum%E6%BA%90%E7%A0%81">6.Integer.sum()源码</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/gAjJskKu4/">
+              <h3 class="post-title">
+                二进制中1的个数
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wwtttt.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

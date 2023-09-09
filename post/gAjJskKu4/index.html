@@ -1,0 +1,266 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>二进制中1的个数 | wade&#39;s tech blog</title>
+<link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1694242182982">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="二进制中1的个数 | wade&#39;s tech blog - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+二进制中1的个数
+1.移位+计数
+int BitCount1(int n){
+    int c = 0; 
+    while (n != 0)
+    {
+        if((n &amp; 1) == 1) // 当前位是1
+ ..." />
+    <meta name="keywords" content="剑指offer,算法" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wwtttt.github.io">
+  <img class="avatar" src="https://wwtttt.github.io/images/avatar.png?v=1694242182982" alt="">
+  </a>
+  <h1 class="site-title">
+    wade&#39;s tech blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WadeStack" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              二进制中1的个数
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-09-26
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://wwtttt.github.io/tag/Zq6balXLQ6/" class="post-tag">
+                  # 剑指offer
+                </a>
+              
+                <a href="https://wwtttt.github.io/tag/ljnBLHox7d/" class="post-tag">
+                  # 算法
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <!-- more -->
+<h1 id="二进制中1的个数">二进制中1的个数</h1>
+<h1 id="1移位计数">1.移位+计数</h1>
+<pre><code class="language-java">int BitCount1(int n){
+    int c = 0; 
+    while (n != 0)
+    {
+        if((n &amp; 1) == 1) // 当前位是1
+            ++c ; // 计数器加1
+        n &gt;&gt;=1 ; // 移位
+    }
+    return c ;
+}
+</code></pre>
+<h2 id="2按1消除">2.按1消除</h2>
+<p>如果一个整数不为0，那么这个整数至少有一位是1。如果我们把这个整数减1，那么原来处在整数最右边的1就会变为0，原来在1后面的所有的0都会变成1(如果最右边的1后面还有0的话)。其余所有位将不会受到影响。<br>
+举个例子：一个二进制数1100，从右边数起第三位是处于最右边的一个1。减去1后，第三位变成0，它后面的两位0变成了1，而前面的1保持不变，因此得到的结果是1011.我们发现减1的结果是把最右边的一个1开始的所有位都取反了。这个时候如果我们再把原来的整数和减去1之后的结果做与运算，从原来整数最右边一个1那一位开始所有位都会变成0。如1100&amp;1011=1000.也就是说，把一个整数减去1，再和原整数做与运算，会把该整数最右边一个1变成0.那么一个整数的二进制有多少个1，就可以进行多少次这样的操作。</p>
+<p>链接：<a href="https://www.nowcoder.com/questionTerminal/8ee967e43c2c4ec193b040ea7fbb10b8?answerType=1&amp;f=discussion">https://www.nowcoder.com/questionTerminal/8ee967e43c2c4ec193b040ea7fbb10b8?answerType=1&amp;f=discussion</a><br>
+来源：牛客网</p>
+<pre><code class="language-java">int BitCount2(int n){
+    int c = 0 ;
+    for (c =0; n!=; ++c)
+        n &amp;= (n -1) ; // 清除最低位的1
+    return c ;
+}
+</code></pre>
+<pre><code class="language-java">//BitCount2的while实现版
+int BitCount2_1(int n){
+    int c = 0 ;
+    while(n != 0){
+    c++;
+    n &amp;= (n-1); // 清除最低位的1
+    }
+    return c ;
+}
+</code></pre>
+<pre><code class="language-java">//BitCount2的终极蛇皮简化版
+int BitCount2_2(int n){
+    int c = 0;
+    for ( ; n; ++c, n &amp;= (n -1));
+    return c ;
+}
+
+</code></pre>
+<h2 id="3分治法">3.分治法</h2>
+<p>一个整数可以转为一个32位2进制数，统计32个位元中为1的个数，转化为统计2组16个位元为1的个数,统计16个位元为1的个数的问题有转化为统计2组16个位元为1的个数，分治到统计2个位元为1的个数。</p>
+<blockquote>
+<p>参考自《算法心得》<br>
+另还有3位段切分和4位段切分（统计x位段中为1的位元个数），详见《算法心得》</p>
+</blockquote>
+<figure data-type="image" tabindex="1"><img src="https://uploadfiles.nowcoder.com/images/20200312/1871642_1584015902259_08DBC6EC7EDDC430E1F5F434BBA21342" alt="图片说明" title="图片标题" loading="lazy"></figure>
+<pre><code>int BitCount3(int x){
+    x = (x &amp; 0x55555555) + ((x &gt;&gt;&gt; 1) &amp; 0x55555555);
+    x = (x &amp; 0x33333333) + ((x &gt;&gt;&gt; 2) &amp; 0x33333333);
+    x = (x &amp; 0x0f0f0f0f) + ((x &gt;&gt;&gt; 4) &amp; 0x0f0f0f0f);
+    x = (x &amp; 0x00ff00ff) + ((x &gt;&gt;&gt; 8) &amp; 0x00ff00ff);
+    x = (x &amp; 0x0000ffff) + ((x &gt;&gt;&gt; 16) &amp; 0x0000ffff);
+    return x;
+}
+
+</code></pre>
+<h2 id="4integerbitcount">4.Integer.bitCount</h2>
+<pre><code class="language-java">public static int BitCount4(int i) {
+	// HD, Figure 5-2
+    i = i - ((i &gt;&gt;&gt; 1) &amp; 0x55555555);
+    i = (i &amp; 0x33333333) + ((i &gt;&gt;&gt; 2) &amp; 0x33333333);
+    i = (i + (i &gt;&gt;&gt; 4)) &amp; 0x0f0f0f0f;
+    i = i + (i &gt;&gt;&gt; 8);
+    i = i + (i &gt;&gt;&gt; 16);
+    return i &amp; 0x3f;
+}
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0">二进制中1的个数</a></li>
+<li><a href="#1%E7%A7%BB%E4%BD%8D%E8%AE%A1%E6%95%B0">1.移位+计数</a>
+<ul>
+<li><a href="#2%E6%8C%891%E6%B6%88%E9%99%A4">2.按1消除</a></li>
+<li><a href="#3%E5%88%86%E6%B2%BB%E6%B3%95">3.分治法</a></li>
+<li><a href="#4integerbitcount">4.Integer.bitCount</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/1Jpk3bYDZ/">
+              <h3 class="post-title">
+                github高效搜索
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wwtttt.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

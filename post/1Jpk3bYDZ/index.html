@@ -1,0 +1,283 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>github高效搜索 | wade&#39;s tech blog</title>
+<link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1694242182982">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="github高效搜索 | wade&#39;s tech blog - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+整理自尚硅谷周阳老师
+1.常用词
+watch：
+对于别人的项目，默认自己都处于 Not watching 的状态，当你选择 Watching，表示你以后会关注这个项目的所有动态，这个项目以后只要发生变动，如被别人提交了 pull requ..." />
+    <meta name="keywords" content="git" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wwtttt.github.io">
+  <img class="avatar" src="https://wwtttt.github.io/images/avatar.png?v=1694242182982" alt="">
+  </a>
+  <h1 class="site-title">
+    wade&#39;s tech blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WadeStack" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              github高效搜索
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-08-07
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://wwtttt.github.io/tag/TNr4AdxitQ/" class="post-tag">
+                  # git
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <!-- more -->
+<p><strong>整理自尚硅谷周阳老师</strong></p>
+<h2 id="1常用词">1.常用词</h2>
+<h3 id="watch">watch：</h3>
+<p>对于别人的项目，默认自己都处于 Not watching 的状态，当你选择 Watching，表示你以后会关注这个项目的所有动态，这个项目以后只要发生变动，如被别人提交了 pull request、被别人发起了issue等等情况，你都会在自己的个人通知中心，收到一条通知消息，如果你设置了个人邮箱，那么你的邮箱也可能收到相应的邮件。</p>
+<h3 id="stars">stars：</h3>
+<p>星星，相当于点赞，不过这个赞需要得到程序员小伙伴的认可才会被star</p>
+<h3 id="fork">fork：</h3>
+<p>把当前项目拷贝一份到自己账号下</p>
+<h2 id="2in限制搜索">2.in限制搜索</h2>
+<p><strong>以springboot项目为例：</strong></p>
+<h3 id="21直接检索">2.1.直接检索</h3>
+<h3 id="22用in限制搜索">2.2.用in限制搜索</h3>
+<h4 id="221-关键词-inname">2.2.1 <code>关键词 in:name</code></h4>
+<h4 id="222-关键词-indescription">2.2.2 <code>关键词 in:description</code></h4>
+<h4 id="223-关键词-inreadme">2.2.3 <code>关键词 in:readme</code></h4>
+<h4 id="224-关键词-inxxyyzz组合">2.2.4 <code>关键词 in:xx,yy,zz组合</code></h4>
+<h2 id="3基于star和fork范围搜索">3.基于star和fork范围搜索</h2>
+<h3 id="31-基于stars">3.1 基于stars</h3>
+<h4 id="311-stars多于xx">3.1.1 stars多于xx：</h4>
+<p><code>关键词 stars:数量</code></p>
+<h4 id="312-stars数在某个区间">3.1.2 stars数在某个区间</h4>
+<p><code>关键词 stars:xx..yy</code></p>
+<h3 id="32-基于fork数">3.2 基于fork数</h3>
+<h4 id="321-fork多余xx">3.2.1 fork多余xx</h4>
+<p><code>关键词 forks:&gt;=xx</code></p>
+<h4 id="322-fork数在某个区间">3.2.2 fork数在某个区间</h4>
+<p>`</p>
+<h3 id="33-多级组合">3.3 多级组合</h3>
+<p>可将多种检索规则组合<br>
+例：Springboot forks:&gt;=5000 stars:&gt;=5000 in:name</p>
+<h2 id="4awesome搜索">4.awesome搜索</h2>
+<p><code>awesome 关键字</code><br>
+可搜索到堪比（甚至优于）官网文档的学习资源</p>
+<h2 id="5l数字">5.#L数字</h2>
+<blockquote>
+<p>功能：高亮代码行</p>
+</blockquote>
+<h3 id="51-l数字">5.1 #L数字</h3>
+<p>例：<a href="https://github.com/527515025/springBoot/blob/master/springboot-mybatis2/src/main/java/cn/abel/Application.java#L11">https://github.com/527515025/springBoot/blob/master/springboot-mybatis2/src/main/java/cn/abel/Application.java#L11</a></p>
+<h3 id="52-l数字1l数字2">5.2 #L数字1..#L数字2</h3>
+<p>例：<a href="https://github.com/527515025/springBoot/blob/master/springboot-mybatis2/src/main/java/cn/abel/Application.java#L11..L16">https://github.com/527515025/springBoot/blob/master/springboot-mybatis2/src/main/java/cn/abel/Application.java#L11..L16</a></p>
+<h2 id="6t搜索">6.T搜索</h2>
+<blockquote>
+<p>功能：在项目内搜索<br>
+进入项目主页：<a href="https://github.com/527515025/springBoot">https://github.com/527515025/springBoot</a></p>
+</blockquote>
+<p>按<code>T</code>后可查看代码文件</p>
+<h6 id="tips谷歌浏览器可通过安装插件octoree更好的阅读代码和查看层级目录">tips:谷歌浏览器可通过安装插件octoree更好的阅读代码和查看层级目录</h6>
+<h2 id="7搜索区域活跃用户大佬">7.搜索区域活跃用户（大佬）</h2>
+<p><code>location:地区 language:编程语言</code></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1%E5%B8%B8%E7%94%A8%E8%AF%8D">1.常用词</a>
+<ul>
+<li><a href="#watch">watch：</a></li>
+<li><a href="#stars">stars：</a></li>
+<li><a href="#fork">fork：</a></li>
+</ul>
+</li>
+<li><a href="#2in%E9%99%90%E5%88%B6%E6%90%9C%E7%B4%A2">2.in限制搜索</a>
+<ul>
+<li><a href="#21%E7%9B%B4%E6%8E%A5%E6%A3%80%E7%B4%A2">2.1.直接检索</a></li>
+<li><a href="#22%E7%94%A8in%E9%99%90%E5%88%B6%E6%90%9C%E7%B4%A2">2.2.用in限制搜索</a>
+<ul>
+<li><a href="#221-%E5%85%B3%E9%94%AE%E8%AF%8D-inname">2.2.1 <code>关键词 in:name</code></a></li>
+<li><a href="#222-%E5%85%B3%E9%94%AE%E8%AF%8D-indescription">2.2.2 <code>关键词 in:description</code></a></li>
+<li><a href="#223-%E5%85%B3%E9%94%AE%E8%AF%8D-inreadme">2.2.3 <code>关键词 in:readme</code></a></li>
+<li><a href="#224-%E5%85%B3%E9%94%AE%E8%AF%8D-inxxyyzz%E7%BB%84%E5%90%88">2.2.4 <code>关键词 in:xx,yy,zz组合</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3%E5%9F%BA%E4%BA%8Estar%E5%92%8Cfork%E8%8C%83%E5%9B%B4%E6%90%9C%E7%B4%A2">3.基于star和fork范围搜索</a>
+<ul>
+<li><a href="#31-%E5%9F%BA%E4%BA%8Estars">3.1 基于stars</a>
+<ul>
+<li><a href="#311-stars%E5%A4%9A%E4%BA%8Exx">3.1.1 stars多于xx：</a></li>
+<li><a href="#312-stars%E6%95%B0%E5%9C%A8%E6%9F%90%E4%B8%AA%E5%8C%BA%E9%97%B4">3.1.2 stars数在某个区间</a></li>
+</ul>
+</li>
+<li><a href="#32-%E5%9F%BA%E4%BA%8Efork%E6%95%B0">3.2 基于fork数</a>
+<ul>
+<li><a href="#321-fork%E5%A4%9A%E4%BD%99xx">3.2.1 fork多余xx</a></li>
+<li><a href="#322-fork%E6%95%B0%E5%9C%A8%E6%9F%90%E4%B8%AA%E5%8C%BA%E9%97%B4">3.2.2 fork数在某个区间</a></li>
+</ul>
+</li>
+<li><a href="#33-%E5%A4%9A%E7%BA%A7%E7%BB%84%E5%90%88">3.3 多级组合</a></li>
+</ul>
+</li>
+<li><a href="#4awesome%E6%90%9C%E7%B4%A2">4.awesome搜索</a></li>
+<li><a href="#5l%E6%95%B0%E5%AD%97">5.#L数字</a>
+<ul>
+<li><a href="#51-l%E6%95%B0%E5%AD%97">5.1 #L数字</a></li>
+<li><a href="#52-l%E6%95%B0%E5%AD%971l%E6%95%B0%E5%AD%972">5.2 #L数字1..#L数字2</a></li>
+</ul>
+</li>
+<li><a href="#6t%E6%90%9C%E7%B4%A2">6.T搜索</a><br>
+*<br>
+*<br>
+*<br>
+* <a href="#tips%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%AF%E9%80%9A%E8%BF%87%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6octoree%E6%9B%B4%E5%A5%BD%E7%9A%84%E9%98%85%E8%AF%BB%E4%BB%A3%E7%A0%81%E5%92%8C%E6%9F%A5%E7%9C%8B%E5%B1%82%E7%BA%A7%E7%9B%AE%E5%BD%95">tips:谷歌浏览器可通过安装插件octoree更好的阅读代码和查看层级目录</a></li>
+<li><a href="#7%E6%90%9C%E7%B4%A2%E5%8C%BA%E5%9F%9F%E6%B4%BB%E8%B7%83%E7%94%A8%E6%88%B7%E5%A4%A7%E4%BD%AC">7.搜索区域活跃用户（大佬）</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/wPiCfGYRQ/">
+              <h3 class="post-title">
+                三个数中求最大最小值
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wwtttt.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>深拷贝与浅拷贝 | wade&#39;s tech blog</title>
+<link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1694242182982">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="深拷贝与浅拷贝 | wade&#39;s tech blog - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+Python代码如下:
+foo = [1,2]
+foo1 = foo
+foo.append(3)
+
+输出foo和foo1的值
+foo = [1,2,3]
+foo1 = [1,2,3]
+
+foo1 和 foo指向同一内存地址，foo.app..." />
+    <meta name="keywords" content="Python" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wwtttt.github.io">
+  <img class="avatar" src="https://wwtttt.github.io/images/avatar.png?v=1694242182982" alt="">
+  </a>
+  <h1 class="site-title">
+    wade&#39;s tech blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WadeStack" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              深拷贝与浅拷贝
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-04-20
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://wwtttt.github.io/tag/tlpimuL60/" class="post-tag">
+                  # Python
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <!-- more -->
+<p>Python代码如下:</p>
+<pre><code>foo = [1,2]
+foo1 = foo
+foo.append(3)
+</code></pre>
+<p>输出foo和foo1的值</p>
+<pre><code>foo = [1,2,3]
+foo1 = [1,2,3]
+</code></pre>
+<p>foo1 和 foo指向同一内存地址，foo.append(3)foo中添加了3，相应foo1也添加了3</p>
+<hr>
+<pre><code>链接：https://www.nowcoder.com/questionTerminal/0d4af069d7d3417ba772ed93331f9057
+来源：牛客网
+
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] 
+b = a 
+c = copy.copy(a) 
+d = copy.deepcopy(a) 
+a.append(5) 
+a[4].append('c') 
+</code></pre>
+<p>解析</p>
+<pre><code>链接：https://www.nowcoder.com/questionTerminal/0d4af069d7d3417ba772ed93331f9057
+来源：牛客网
+
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] 
+b = a     # 引用，除非直接给a重新赋值，否则a变则b变，b变则a变
+c = copy.copy(a)   # 浅复制，只会拷贝父对象， 不会拷贝父对象中的子对象，所以若a的子对象变则c 变,但是父对象变c不会变
+d = copy.deepcopy(a) #深拷贝，完全拷贝，完全独立于原对象，a变也不变
+a.append(5) # 改变父对象
+a[4].append('c')  #改变父对象中的 ['a', 'b']子对象
+
+# a=[1, 2, 3, 4, ['a', 'b','c'],5] 
+b=[1, 2, 3, 4, ['a', 'b','c'],5] 
+c=[1, 2, 3, 4, ['a', 'b','c']] 
+d=[1, 2, 3, 4, ['a', 'b']] 
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/A3Qp5QYkS/">
+              <h3 class="post-title">
+                bashrc修改导致linux系统指令不能用的解决方案
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wwtttt.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

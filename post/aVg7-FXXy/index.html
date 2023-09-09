@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BF和KMP的cpp代码实现 | wade&#39;s tech blog</title>
+<link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1694242182982">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="BF和KMP的cpp代码实现 | wade&#39;s tech blog - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+//BF算法
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int BF(char S[ ], char T[ ]);
+
+int main()
+{
+    char S[]=&quo..." />
+    <meta name="keywords" content="算法" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wwtttt.github.io">
+  <img class="avatar" src="https://wwtttt.github.io/images/avatar.png?v=1694242182982" alt="">
+  </a>
+  <h1 class="site-title">
+    wade&#39;s tech blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WadeStack" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              BF和KMP的cpp代码实现
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-04-08
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://wwtttt.github.io/tag/ljnBLHox7d/" class="post-tag">
+                  # 算法
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <!-- more -->
+<pre><code class="language-C++">//BF算法
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int BF(char S[ ], char T[ ]);
+
+int main()
+{
+    char S[]=&quot;abcabcabcaccb&quot;;
+    char T[]=&quot;abcacc&quot;;
+    int index=BF(S,T);
+    for (int i = 1; i &lt; index; i++)
+        cout&lt;&lt;&quot; &quot;;
+    cout&lt;&lt;T&lt;&lt;&quot;在&quot;&lt;&lt;endl;
+    cout&lt;&lt;S&lt;&lt;&quot;中的位置是：&quot;&lt;&lt;index&lt;&lt;endl;
+    return 0;
+}
+
+int BF(char S[ ], char T[ ])
+{
+    int index = 0;                            //主串从下标0开始第一趟匹配
+    int i = 0, j = 0;                           //设置比较的起始下标
+    while ((S[i] != '\0') &amp;&amp; (T[j] != '\0'))
+    {
+        if (S[i] == T[j])
+        {
+            i++;
+            j++;
+        }
+        else
+        {
+            index++;    //i和j分别回溯
+            i = index;
+            j = 0;
+        }
+    }
+    if (T[j] == '\0')
+        return index + 1;      //返回本趟匹配的开始位置（不是下标）
+    else
+        return 0;
+}
+
+//KMP算法
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+void GetNext(char T[ ], int next[ ]);
+int KMP(char S[],char T[]);
+
+int main()
+{
+    char  S[]=&quot;ababcabcacbab&quot;;
+    char  T[]=&quot;abcac&quot;;
+    int index = KMP(S,T);
+    for (int i = 1; i &lt; index; i++)
+        cout&lt;&lt;&quot; &quot;;
+    cout&lt;&lt;T&lt;&lt;&quot;在&quot;&lt;&lt;endl;
+    cout&lt;&lt;S&lt;&lt;&quot;中的位置是：&quot;&lt;&lt;index&lt;&lt;endl;;
+    return 0;
+}
+
+int KMP(char S[],char T[])
+{
+    int i = 0, j = 0;
+    int next[80] = {-1};
+    GetNext(T,next);
+    while (S[i] != '\0' &amp;&amp; T[j] != '\0')
+    {
+        if(S[i] == T[j])
+        {
+            i++;
+            j++;
+        }
+        else
+        {
+            j = next[j];
+            if (j == -1)
+            {
+                i++;
+                j++;
+            }
+        }
+    }
+    if(T[j] == '\0')
+        return i - strlen(T) + 1;
+    else
+        return 0;
+}
+void GetNext(char T[], int next[])
+{
+    int i, j, len;
+    next[0] = -1;
+    for (j = 1; T[j]!='\0'; j++)
+    {
+        for (len = j - 1; len &gt;= 1; len--)
+        {
+            for (i = 0; i &lt; len; i++)
+                if(T[i] != T[j-len+i])
+                    break;
+            if (i == len)
+            {
+                next[j] = len;
+                break;
+            }
+        }
+        if (len &lt; 1)
+            next[j] = 0;
+    }
+}
+
+/* 以下为改进的蛮力算法
+void GetNext(char T[ ], int next[ ])
+{
+	int j = 0, k = -1;
+	next[0] = -1;
+	while (T[j] != '\0')                           //直到字符串末尾
+	{
+		if (k == -1) {                           //无相同子串
+			next[++j] = 0; k = 0;
+		}else if (T[j] == T[k]) {                //确定next[j+1]的值
+				k++;
+				next[++j] = k;
+			} else k = next[k];          //取T[0]...T[j]的下一个相等子串的长度
+	}
+ }
+*/
+
+//留着补充BM算法
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wwtttt.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

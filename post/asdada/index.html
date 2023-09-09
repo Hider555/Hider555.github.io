@@ -1,0 +1,387 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>二进制总结 | wade&#39;s tech blog</title>
+<link rel="shortcut icon" href="https://wwtttt.github.io/favicon.ico?v=1694242182982">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wwtttt.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="二进制总结 | wade&#39;s tech blog - Atom Feed" href="https://wwtttt.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="1.编码
+
+
+
+
+正数
+负数
+
+
+
+
+原码
+0本体
+1本体
+
+
+补码
+0本体
+按位取反+1(符号位始终为1)
+
+
+反码
+0本体
+按位取反(符号位始终为1)
+
+
+
+2.分类
+有符号:
+无符号:
+3. 位运算
+3.1 与 、或、异或
+
+
+
+
+
+..." />
+    <meta name="keywords" content="计算机基础,二进制" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wwtttt.github.io">
+  <img class="avatar" src="https://wwtttt.github.io/images/avatar.png?v=1694242182982" alt="">
+  </a>
+  <h1 class="site-title">
+    wade&#39;s tech blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WadeStack" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              二进制总结
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-02-07
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://wwtttt.github.io/tag/Ws2bP9fFZh/" class="post-tag">
+                  # 计算机基础
+                </a>
+              
+                <a href="https://wwtttt.github.io/tag/re5C1nsODF/" class="post-tag">
+                  # 二进制
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h3 id="1编码">1.编码</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">正数</th>
+<th style="text-align:left">负数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">原码</td>
+<td style="text-align:left">0本体</td>
+<td style="text-align:left">1本体</td>
+</tr>
+<tr>
+<td style="text-align:left">补码</td>
+<td style="text-align:left">0本体</td>
+<td style="text-align:left">按位取反+1(符号位始终为1)</td>
+</tr>
+<tr>
+<td style="text-align:left">反码</td>
+<td style="text-align:left">0本体</td>
+<td style="text-align:left">按位取反(符号位始终为1)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2分类">2.分类</h2>
+<h5 id="有符号">有符号:</h5>
+<h5 id="无符号">无符号:</h5>
+<h2 id="3-位运算">3. 位运算</h2>
+<h4 id="31-与-或-异或">3.1 与 、或、异或</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与(&amp;)</td>
+<td>0&amp;0=0</td>
+<td>1&amp;0=0</td>
+<td>1&amp;1=1</td>
+</tr>
+<tr>
+<td>或(|)</td>
+<td>0|0=0</td>
+<td>0|1=1</td>
+<td>1|1=1</td>
+</tr>
+<tr>
+<td>异或(^)</td>
+<td>0^0=0</td>
+<td>1^0=1</td>
+<td>1^1=0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="32-左移">3.2 左移</h4>
+<h6 id="mn">m&lt;&lt;n</h6>
+<p>表示把m左移n位。往左移n位的时候，最左边的n位将被丢弃，同时在最右边补上n个0.</p>
+<p>exp：</p>
+<p>00<u><strong>001010</strong></u>&lt;&lt;2=<u><strong>001010</strong></u>00</p>
+<p>100<u><strong>01010</strong></u>&lt;&lt;3=<u><strong>01010</strong></u>000</p>
+<h4 id="33-右移">3.3 右移</h4>
+<h6 id="mn-2">m&gt;&gt;n</h6>
+<p>表示把m右移n位。往右移的时候，最右边的n位将被丢弃。</p>
+<p>如果数字之前是一个正数，则右移之后在最左边补n个0；</p>
+<p>如果数字之前是一个负数，则右移之后在最左边补n个1.</p>
+<p>exp:</p>
+<p><u><strong>000010</strong></u>10&gt;&gt;2=00<u><strong>000010</strong></u></p>
+<p><u><strong>10001</strong></u>010&gt;&gt;3=111<u><strong>10001</strong></u></p>
+<h4 id="34-应用">3.4 应用</h4>
+<h5 id="341-移位运算代替乘除法">3.4.1 移位运算代替乘除法</h5>
+<h5 id="342-右移一位-除以2">3.4.2 右移一位 == 除以2</h5>
+<h5 id="343-左移一位-乘以2">3.4.3 左移一位 == 乘以2</h5>
+<h6 id="二进制中1的个数">二进制中1的个数</h6>
+<pre><code class="language-cpp">int NumberOf1(int n)
+{
+    int count = 0;
+    while(n)
+    {
+        ++count;
+        n = (n-1) &amp; n;
+    }
+    return count;
+}
+
+</code></pre>
+<h6 id="不用加减法做加法">不用加减法做加法</h6>
+<pre><code class="language-cpp">int Add(int num1,int num2)
+{
+    int sum,carry;
+    do
+    {
+        sum = num1 ^ num2;
+        carry = (num1 &amp; num2) &lt;&lt; 1;
+        num1 = sum;
+        num2 = carry;
+    } 
+    while(num2 !=0 );
+    
+    return num1;
+}
+</code></pre>
+<h2 id="4实战中常见的位运算">4.实战中常见的位运算</h2>
+<p>6(10)=0110(2)<br>
+5(10)=0101(2)<br>
+-6(10)=1010(2)</p>
+<p>1.判断奇偶性  (x %2 == 1)<code>X &amp; 1 == 1 OR == 0</code></p>
+<p>0110&amp;0001=0 偶数</p>
+<p>2.清除最低位的1<code>X = X &amp; (X-1)</code></p>
+<p>0110&amp;0101=0100</p>
+<p>3.得到最低位的1<code>X &amp; (-X)</code></p>
+<p>0110&amp;1010=0010</p>
+<p>更为复杂的位运算操作<br>
+1.将x最右边的n位清零<code>x &amp; ( ~ 0 &lt;&lt; n )</code></p>
+<p>2.获取x的第n位值<code>( x &gt;&gt; n ) &amp; 1</code></p>
+<p>3.获取x的第n位的幂值<code>x &amp; ( 1 &lt;&lt; ( n - 1 ) )</code></p>
+<p>4.仅将第n位置位1<code>x | ( 1 &lt;&lt; n )</code></p>
+<p>5.仅将第n位置位0<code>x &amp; ( ~ ( 1 &lt;&lt; n ) )</code></p>
+<p>6.将x的最高位值第n位（含）清零<code>x &amp; ( ( 1 &lt;&lt; n ) - 1 )</code></p>
+<p>7.将第n位至第0位（含）清零<code>x &amp; ( ~ ( ( 1 &lt;&lt; ( n + 1 ) ) - 1 ) )</code></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1%E7%BC%96%E7%A0%81">1.编码</a></li>
+</ul>
+</li>
+<li><a href="#2%E5%88%86%E7%B1%BB">2.分类</a><br>
+*<br>
+*<br>
+* <a href="#%E6%9C%89%E7%AC%A6%E5%8F%B7">有符号:</a><br>
+* <a href="#%E6%97%A0%E7%AC%A6%E5%8F%B7">无符号:</a></li>
+<li><a href="#3-%E4%BD%8D%E8%BF%90%E7%AE%97">3. 位运算</a><br>
+*
+<ul>
+<li><a href="#31-%E4%B8%8E-%E6%88%96-%E5%BC%82%E6%88%96">3.1 与 、或、异或</a></li>
+<li><a href="#32-%E5%B7%A6%E7%A7%BB">3.2 左移</a><br>
+*
+<ul>
+<li><a href="#mn">m&lt;&lt;n</a></li>
+</ul>
+</li>
+<li><a href="#33-%E5%8F%B3%E7%A7%BB">3.3 右移</a><br>
+*
+<ul>
+<li><a href="#mn-2">m&gt;&gt;n</a></li>
+</ul>
+</li>
+<li><a href="#34-%E5%BA%94%E7%94%A8">3.4 应用</a>
+<ul>
+<li><a href="#341-%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97%E4%BB%A3%E6%9B%BF%E4%B9%98%E9%99%A4%E6%B3%95">3.4.1 移位运算代替乘除法</a></li>
+<li><a href="#342-%E5%8F%B3%E7%A7%BB%E4%B8%80%E4%BD%8D-%E9%99%A4%E4%BB%A52">3.4.2 右移一位 == 除以2</a></li>
+<li><a href="#343-%E5%B7%A6%E7%A7%BB%E4%B8%80%E4%BD%8D-%E4%B9%98%E4%BB%A52">3.4.3 左移一位 == 乘以2</a>
+<ul>
+<li><a href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0">二进制中1的个数</a></li>
+<li><a href="#%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E6%B3%95%E5%81%9A%E5%8A%A0%E6%B3%95">不用加减法做加法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4%E5%AE%9E%E6%88%98%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BD%8D%E8%BF%90%E7%AE%97">4.实战中常见的位运算</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wwtttt.github.io/post/git-clone-jia-su/">
+              <h3 class="post-title">
+                git-clone加速
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wwtttt.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

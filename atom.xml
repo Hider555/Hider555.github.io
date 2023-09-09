@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wwtttt.github.io</id>
+    <title>wade&apos;s tech blog</title>
+    <updated>2023-09-09T06:49:46.308Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wwtttt.github.io"/>
+    <link rel="self" href="https://wwtttt.github.io/atom.xml"/>
+    <logo>https://wwtttt.github.io/images/avatar.png</logo>
+    <icon>https://wwtttt.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, wade&apos;s tech blog</rights>
+    <entry>
+        <title type="html"><![CDATA[OneDrive加速神器Proxifier]]></title>
+        <id>https://wwtttt.github.io/post/NWn0go-cO/</id>
+        <link href="https://wwtttt.github.io/post/NWn0go-cO/">
+        </link>
+        <updated>2020-05-11T00:23:55.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>1.下载</p>
+<p>2.配置代理服务，添加代理规则<br>
+Profile-&gt;Proxy Servers-&gt;Add</p>
+<pre><code>Address 127.0.0.1   Port 10808
+SOCKS Version 5 
+</code></pre>
+<p>3.配置要代理的软件<br>
+Profile-&gt;Proxification Rules</p>
+<p>localhost和default设置为Direct</p>
+<p>点击Add<br>
+Applications选择要代理应用的exe<br>
+Action选择添加的代理规则<br>
+保存。并重启代理的应用</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二进制总结]]></title>
+        <id>https://wwtttt.github.io/post/asdada/</id>
+        <link href="https://wwtttt.github.io/post/asdada/">
+        </link>
+        <updated>2020-02-07T10:18:30.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1编码">1.编码</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">正数</th>
+<th style="text-align:left">负数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">原码</td>
+<td style="text-align:left">0本体</td>
+<td style="text-align:left">1本体</td>
+</tr>
+<tr>
+<td style="text-align:left">补码</td>
+<td style="text-align:left">0本体</td>
+<td style="text-align:left">按位取反+1(符号位始终为1)</td>
+</tr>
+<tr>
+<td style="text-align:left">反码</td>
+<td style="text-align:left">0本体</td>
+<td style="text-align:left">按位取反(符号位始终为1)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2分类">2.分类</h2>
+<h5 id="有符号">有符号:</h5>
+<h5 id="无符号">无符号:</h5>
+<h2 id="3-位运算">3. 位运算</h2>
+<h4 id="31-与-或-异或">3.1 与 、或、异或</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与(&amp;)</td>
+<td>0&amp;0=0</td>
+<td>1&amp;0=0</td>
+<td>1&amp;1=1</td>
+</tr>
+<tr>
+<td>或(|)</td>
+<td>0|0=0</td>
+<td>0|1=1</td>
+<td>1|1=1</td>
+</tr>
+<tr>
+<td>异或(^)</td>
+<td>0^0=0</td>
+<td>1^0=1</td>
+<td>1^1=0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="32-左移">3.2 左移</h4>
+<h6 id="mn">m&lt;&lt;n</h6>
+<p>表示把m左移n位。往左移n位的时候，最左边的n位将被丢弃，同时在最右边补上n个0.</p>
+<p>exp：</p>
+<p>00<u><strong>001010</strong></u>&lt;&lt;2=<u><strong>001010</strong></u>00</p>
+<p>100<u><strong>01010</strong></u>&lt;&lt;3=<u><strong>01010</strong></u>000</p>
+<h4 id="33-右移">3.3 右移</h4>
+<h6 id="mn-2">m&gt;&gt;n</h6>
+<p>表示把m右移n位。往右移的时候，最右边的n位将被丢弃。</p>
+<p>如果数字之前是一个正数，则右移之后在最左边补n个0；</p>
+<p>如果数字之前是一个负数，则右移之后在最左边补n个1.</p>
+<p>exp:</p>
+<p><u><strong>000010</strong></u>10&gt;&gt;2=00<u><strong>000010</strong></u></p>
+<p><u><strong>10001</strong></u>010&gt;&gt;3=111<u><strong>10001</strong></u></p>
+<h4 id="34-应用">3.4 应用</h4>
+<h5 id="341-移位运算代替乘除法">3.4.1 移位运算代替乘除法</h5>
+<h5 id="342-右移一位-除以2">3.4.2 右移一位 == 除以2</h5>
+<h5 id="343-左移一位-乘以2">3.4.3 左移一位 == 乘以2</h5>
+<h6 id="二进制中1的个数">二进制中1的个数</h6>
+<pre><code class="language-cpp">int NumberOf1(int n)
+{
+    int count = 0;
+    while(n)
+    {
+        ++count;
+        n = (n-1) &amp; n;
+    }
+    return count;
+}
+
+</code></pre>
+<h6 id="不用加减法做加法">不用加减法做加法</h6>
+<pre><code class="language-cpp">int Add(int num1,int num2)
+{
+    int sum,carry;
+    do
+    {
+        sum = num1 ^ num2;
+        carry = (num1 &amp; num2) &lt;&lt; 1;
+        num1 = sum;
+        num2 = carry;
+    } 
+    while(num2 !=0 );
+    
+    return num1;
+}
+</code></pre>
+<h2 id="4实战中常见的位运算">4.实战中常见的位运算</h2>
+<p>6(10)=0110(2)<br>
+5(10)=0101(2)<br>
+-6(10)=1010(2)</p>
+<p>1.判断奇偶性  (x %2 == 1)<code>X &amp; 1 == 1 OR == 0</code></p>
+<p>0110&amp;0001=0 偶数</p>
+<p>2.清除最低位的1<code>X = X &amp; (X-1)</code></p>
+<p>0110&amp;0101=0100</p>
+<p>3.得到最低位的1<code>X &amp; (-X)</code></p>
+<p>0110&amp;1010=0010</p>
+<p>更为复杂的位运算操作<br>
+1.将x最右边的n位清零<code>x &amp; ( ~ 0 &lt;&lt; n )</code></p>
+<p>2.获取x的第n位值<code>( x &gt;&gt; n ) &amp; 1</code></p>
+<p>3.获取x的第n位的幂值<code>x &amp; ( 1 &lt;&lt; ( n - 1 ) )</code></p>
+<p>4.仅将第n位置位1<code>x | ( 1 &lt;&lt; n )</code></p>
+<p>5.仅将第n位置位0<code>x &amp; ( ~ ( 1 &lt;&lt; n ) )</code></p>
+<p>6.将x的最高位值第n位（含）清零<code>x &amp; ( ( 1 &lt;&lt; n ) - 1 )</code></p>
+<p>7.将第n位至第0位（含）清零<code>x &amp; ( ~ ( ( 1 &lt;&lt; ( n + 1 ) ) - 1 ) )</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[git-clone加速]]></title>
+        <id>https://wwtttt.github.io/post/git-clone-jia-su/</id>
+        <link href="https://wwtttt.github.io/post/git-clone-jia-su/">
+        </link>
+        <updated>2020-01-20T10:16:07.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="0-国内为什么速度会慢">0. 国内为什么速度会慢</h1>
+<ul>
+<li>github的服务器在国外</li>
+<li>gfw</li>
+</ul>
+<h1 id="解决方案">解决方案</h1>
+<blockquote>
+<p>这里就不在推荐修改dns的做法，我也尝试过，不仅麻烦，速度还是不稳定。</p>
+</blockquote>
+<!-- more -->
+<h2 id="1-拥有科学上网的能力">1. 拥有科学上网的能力</h2>
+<blockquote>
+<p>如果是计算机相关专业的学生或者软件开发人员，只会用百度，我觉得是一件很可悲的事。</p>
+</blockquote>
+<h2 id="2-配置git">2. 配置git</h2>
+<h3 id="21-配置socks5代理">2.1 配置socks5代理</h3>
+<pre><code class="language-git">git config --global http.proxy 'socks5://127.0.0.1:对应的端口号'
+git config --global http.proxy 'socks5://127.0.0.1:对应的端口号'
+</code></pre>
+<h3 id="22-取消代理">2.2 取消代理</h3>
+<pre><code class="language-git">git config --global --unset http.proxy
+git config --global --unset https.proxy
+</code></pre>
+<p>配置完之后，enjoy你的带宽跑满的愉悦。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LeetCode cpp代码缩减runtime]]></title>
+        <id>https://wwtttt.github.io/post/EuStR3pqe/</id>
+        <link href="https://wwtttt.github.io/post/EuStR3pqe/">
+        </link>
+        <updated>2019-10-11T10:45:35.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>在leetcode第11题看到一个题解，添加到代码前面，大幅缩减runtime</p>
+<p>代码为：</p>
+<pre><code>static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	return 0;
+}();
+</code></pre>
+<p>leetcode11题解</p>
+<pre><code>static int speedup=[](){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	return 0;
+}();
+class Solution
+{
+public:
+    int maxArea(vector&lt;int&gt; &amp;height)
+    {
+        int i = 0, j = height.size() - 1, water = 0;
+        while (i &lt; j)
+        {
+            int h = min(height[i], height[j]);
+            water = max(water, (j - i) * h);
+            while (height[i] &lt;= h &amp;&amp; i &lt; j)
+                i++;
+            while (height[j] &lt;= h &amp;&amp; i &lt; j)
+                j--;
+        }
+        return water;
+    }
+};
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[不用加减乘除做加法]]></title>
+        <id>https://wwtttt.github.io/post/ZFRD2AlYT/</id>
+        <link href="https://wwtttt.github.io/post/ZFRD2AlYT/">
+        </link>
+        <updated>2019-10-10T10:33:34.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="1位运算">1.位运算</h1>
+<pre><code class="language-java">//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+//Java
+public class Solution {
+    public int Add(int num1,int num2) {
+        while (num2!=0) {
+            int temp = num1^num2;
+            num2 = (num1&amp;num2)&lt;&lt;1;
+            num1 = temp;
+        }
+        return num1;
+    }
+}
+</code></pre>
+<pre><code class="language-c++">//C++:
+class Solution {
+public        
+    int Add(int num1, int num2)
+    {
+        return num2?Add(num1^num2,(num1&amp;num2)&lt;&lt;1):num1;
+    }
+};
+</code></pre>
+<h1 id="2汇编">2.汇编</h1>
+<pre><code class="language-assembly">//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+int add(int a, int b)
+{
+    _asm
+    {
+        MOV EAX, a
+        MOV ECX, b
+        ADD EAX, ECX
+    }
+}
+</code></pre>
+<h1 id="3自增自减">3.自增自减</h1>
+<pre><code class="language-java">//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+
+public class Solution {
+    public int Add(int num1,int num2) {
+        if(num1&gt;0){
+            while(num1--!=0)
+                num2++;
+        }
+        else if(num1&lt;0){
+            while(num1++!=0)
+                num2--;
+        }
+        return num2;
+    }
+}
+</code></pre>
+<h1 id="4通过指针">4.通过指针</h1>
+<pre><code class="language-c++">//链接：https://www.nowcoder.com/questionTerminal/59ac416b4b944300b617d4f7f111b215
+//来源：牛客网
+
+class Solution {
+public:
+    int Add(int num1, int num2)
+    {
+        char* a = reinterpret_cast&lt;char*&gt;(num1);
+        return reinterpret_cast&lt;long&gt;(&amp;(a[num2]));
+    }
+};
+</code></pre>
+<h1 id="5通过函数">5.通过函数</h1>
+<pre><code class="language-java">public int Add(int num1, int num2) {
+   return Integer.sum(num1, num2);
+}
+</code></pre>
+<h1 id="6integersum源码">6.Integer.sum()源码</h1>
+<pre><code class="language-java">public static int sum(int a, int b) {
+        return a + b;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二进制中1的个数]]></title>
+        <id>https://wwtttt.github.io/post/gAjJskKu4/</id>
+        <link href="https://wwtttt.github.io/post/gAjJskKu4/">
+        </link>
+        <updated>2019-09-26T10:39:58.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="二进制中1的个数">二进制中1的个数</h1>
+<h1 id="1移位计数">1.移位+计数</h1>
+<pre><code class="language-java">int BitCount1(int n){
+    int c = 0; 
+    while (n != 0)
+    {
+        if((n &amp; 1) == 1) // 当前位是1
+            ++c ; // 计数器加1
+        n &gt;&gt;=1 ; // 移位
+    }
+    return c ;
+}
+</code></pre>
+<h2 id="2按1消除">2.按1消除</h2>
+<p>如果一个整数不为0，那么这个整数至少有一位是1。如果我们把这个整数减1，那么原来处在整数最右边的1就会变为0，原来在1后面的所有的0都会变成1(如果最右边的1后面还有0的话)。其余所有位将不会受到影响。<br>
+举个例子：一个二进制数1100，从右边数起第三位是处于最右边的一个1。减去1后，第三位变成0，它后面的两位0变成了1，而前面的1保持不变，因此得到的结果是1011.我们发现减1的结果是把最右边的一个1开始的所有位都取反了。这个时候如果我们再把原来的整数和减去1之后的结果做与运算，从原来整数最右边一个1那一位开始所有位都会变成0。如1100&amp;1011=1000.也就是说，把一个整数减去1，再和原整数做与运算，会把该整数最右边一个1变成0.那么一个整数的二进制有多少个1，就可以进行多少次这样的操作。</p>
+<p>链接：<a href="https://www.nowcoder.com/questionTerminal/8ee967e43c2c4ec193b040ea7fbb10b8?answerType=1&amp;f=discussion">https://www.nowcoder.com/questionTerminal/8ee967e43c2c4ec193b040ea7fbb10b8?answerType=1&amp;f=discussion</a><br>
+来源：牛客网</p>
+<pre><code class="language-java">int BitCount2(int n){
+    int c = 0 ;
+    for (c =0; n!=; ++c)
+        n &amp;= (n -1) ; // 清除最低位的1
+    return c ;
+}
+</code></pre>
+<pre><code class="language-java">//BitCount2的while实现版
+int BitCount2_1(int n){
+    int c = 0 ;
+    while(n != 0){
+    c++;
+    n &amp;= (n-1); // 清除最低位的1
+    }
+    return c ;
+}
+</code></pre>
+<pre><code class="language-java">//BitCount2的终极蛇皮简化版
+int BitCount2_2(int n){
+    int c = 0;
+    for ( ; n; ++c, n &amp;= (n -1));
+    return c ;
+}
+
+</code></pre>
+<h2 id="3分治法">3.分治法</h2>
+<p>一个整数可以转为一个32位2进制数，统计32个位元中为1的个数，转化为统计2组16个位元为1的个数,统计16个位元为1的个数的问题有转化为统计2组16个位元为1的个数，分治到统计2个位元为1的个数。</p>
+<blockquote>
+<p>参考自《算法心得》<br>
+另还有3位段切分和4位段切分（统计x位段中为1的位元个数），详见《算法心得》</p>
+</blockquote>
+<figure data-type="image" tabindex="1"><img src="https://uploadfiles.nowcoder.com/images/20200312/1871642_1584015902259_08DBC6EC7EDDC430E1F5F434BBA21342" alt="图片说明" title="图片标题" loading="lazy"></figure>
+<pre><code>int BitCount3(int x){
+    x = (x &amp; 0x55555555) + ((x &gt;&gt;&gt; 1) &amp; 0x55555555);
+    x = (x &amp; 0x33333333) + ((x &gt;&gt;&gt; 2) &amp; 0x33333333);
+    x = (x &amp; 0x0f0f0f0f) + ((x &gt;&gt;&gt; 4) &amp; 0x0f0f0f0f);
+    x = (x &amp; 0x00ff00ff) + ((x &gt;&gt;&gt; 8) &amp; 0x00ff00ff);
+    x = (x &amp; 0x0000ffff) + ((x &gt;&gt;&gt; 16) &amp; 0x0000ffff);
+    return x;
+}
+
+</code></pre>
+<h2 id="4integerbitcount">4.Integer.bitCount</h2>
+<pre><code class="language-java">public static int BitCount4(int i) {
+	// HD, Figure 5-2
+    i = i - ((i &gt;&gt;&gt; 1) &amp; 0x55555555);
+    i = (i &amp; 0x33333333) + ((i &gt;&gt;&gt; 2) &amp; 0x33333333);
+    i = (i + (i &gt;&gt;&gt; 4)) &amp; 0x0f0f0f0f;
+    i = i + (i &gt;&gt;&gt; 8);
+    i = i + (i &gt;&gt;&gt; 16);
+    return i &amp; 0x3f;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[github高效搜索]]></title>
+        <id>https://wwtttt.github.io/post/1Jpk3bYDZ/</id>
+        <link href="https://wwtttt.github.io/post/1Jpk3bYDZ/">
+        </link>
+        <updated>2019-08-07T10:43:30.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p><strong>整理自尚硅谷周阳老师</strong></p>
+<h2 id="1常用词">1.常用词</h2>
+<h3 id="watch">watch：</h3>
+<p>对于别人的项目，默认自己都处于 Not watching 的状态，当你选择 Watching，表示你以后会关注这个项目的所有动态，这个项目以后只要发生变动，如被别人提交了 pull request、被别人发起了issue等等情况，你都会在自己的个人通知中心，收到一条通知消息，如果你设置了个人邮箱，那么你的邮箱也可能收到相应的邮件。</p>
+<h3 id="stars">stars：</h3>
+<p>星星，相当于点赞，不过这个赞需要得到程序员小伙伴的认可才会被star</p>
+<h3 id="fork">fork：</h3>
+<p>把当前项目拷贝一份到自己账号下</p>
+<h2 id="2in限制搜索">2.in限制搜索</h2>
+<p><strong>以springboot项目为例：</strong></p>
+<h3 id="21直接检索">2.1.直接检索</h3>
+<h3 id="22用in限制搜索">2.2.用in限制搜索</h3>
+<h4 id="221-关键词-inname">2.2.1 <code>关键词 in:name</code></h4>
+<h4 id="222-关键词-indescription">2.2.2 <code>关键词 in:description</code></h4>
+<h4 id="223-关键词-inreadme">2.2.3 <code>关键词 in:readme</code></h4>
+<h4 id="224-关键词-inxxyyzz组合">2.2.4 <code>关键词 in:xx,yy,zz组合</code></h4>
+<h2 id="3基于star和fork范围搜索">3.基于star和fork范围搜索</h2>
+<h3 id="31-基于stars">3.1 基于stars</h3>
+<h4 id="311-stars多于xx">3.1.1 stars多于xx：</h4>
+<p><code>关键词 stars:数量</code></p>
+<h4 id="312-stars数在某个区间">3.1.2 stars数在某个区间</h4>
+<p><code>关键词 stars:xx..yy</code></p>
+<h3 id="32-基于fork数">3.2 基于fork数</h3>
+<h4 id="321-fork多余xx">3.2.1 fork多余xx</h4>
+<p><code>关键词 forks:&gt;=xx</code></p>
+<h4 id="322-fork数在某个区间">3.2.2 fork数在某个区间</h4>
+<p>`</p>
+<h3 id="33-多级组合">3.3 多级组合</h3>
+<p>可将多种检索规则组合<br>
+例：Springboot forks:&gt;=5000 stars:&gt;=5000 in:name</p>
+<h2 id="4awesome搜索">4.awesome搜索</h2>
+<p><code>awesome 关键字</code><br>
+可搜索到堪比（甚至优于）官网文档的学习资源</p>
+<h2 id="5l数字">5.#L数字</h2>
+<blockquote>
+<p>功能：高亮代码行</p>
+</blockquote>
+<h3 id="51-l数字">5.1 #L数字</h3>
+<p>例：<a href="https://github.com/527515025/springBoot/blob/master/springboot-mybatis2/src/main/java/cn/abel/Application.java#L11">https://github.com/527515025/springBoot/blob/master/springboot-mybatis2/src/main/java/cn/abel/Application.java#L11</a></p>
+<h3 id="52-l数字1l数字2">5.2 #L数字1..#L数字2</h3>
+<p>例：<a href="https://github.com/527515025/springBoot/blob/master/springboot-mybatis2/src/main/java/cn/abel/Application.java#L11..L16">https://github.com/527515025/springBoot/blob/master/springboot-mybatis2/src/main/java/cn/abel/Application.java#L11..L16</a></p>
+<h2 id="6t搜索">6.T搜索</h2>
+<blockquote>
+<p>功能：在项目内搜索<br>
+进入项目主页：<a href="https://github.com/527515025/springBoot">https://github.com/527515025/springBoot</a></p>
+</blockquote>
+<p>按<code>T</code>后可查看代码文件</p>
+<h6 id="tips谷歌浏览器可通过安装插件octoree更好的阅读代码和查看层级目录">tips:谷歌浏览器可通过安装插件octoree更好的阅读代码和查看层级目录</h6>
+<h2 id="7搜索区域活跃用户大佬">7.搜索区域活跃用户（大佬）</h2>
+<p><code>location:地区 language:编程语言</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[三个数中求最大最小值]]></title>
+        <id>https://wwtttt.github.io/post/wPiCfGYRQ/</id>
+        <link href="https://wwtttt.github.io/post/wPiCfGYRQ/">
+        </link>
+        <updated>2019-04-26T10:38:03.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>以最小值代码分析：</p>
+<p>1.先用a和b比较，得到a、b中较小的那个数，再和c比较，最后得到最小值</p>
+<pre><code>int max(int a,int b,int c)
+{
+	if(a&lt;b)
+		return a&lt;c?a:c;
+	else
+		return b&lt;c?b:c; 
+}
+</code></pre>
+<p>2.三个数的大小无非三种情况，a最小，b最小或者c最小，将三种情况直接列出。</p>
+<pre><code>int max(int a,int b,int c)
+{
+	if(a&lt;=b &amp;&amp; a&lt;=c)
+		return a;
+	else if(b&lt;=a &amp;&amp; b&lt;=c)
+		return b;
+	else if(c&lt;=a &amp;&amp; c&lt;=b)
+		return c;
+}
+</code></pre>
+<p>3.先用a、b分别和c比较，得到a、c中的较小和b、c中的较小，两个较小比较得到三个数中的最小</p>
+<pre><code>int max(int a,int b,int c)
+{
+	return a&lt;b?(a&lt;c?a:c):(b&lt;c?b:c);
+}
+</code></pre>
+<p>4.先用a和b比较，得到a、b中较小的那个数，再和c比较，最后得到最小值。<br>
+这一条是1.的三目运算符的实现</p>
+<pre><code>int max(int a,int b,int c)
+{
+	return (a&lt;b?a:b)&lt;c?(a&lt;b?a:b):c;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[深拷贝与浅拷贝]]></title>
+        <id>https://wwtttt.github.io/post/VkKLxZjqk/</id>
+        <link href="https://wwtttt.github.io/post/VkKLxZjqk/">
+        </link>
+        <updated>2019-04-20T10:48:13.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>Python代码如下:</p>
+<pre><code>foo = [1,2]
+foo1 = foo
+foo.append(3)
+</code></pre>
+<p>输出foo和foo1的值</p>
+<pre><code>foo = [1,2,3]
+foo1 = [1,2,3]
+</code></pre>
+<p>foo1 和 foo指向同一内存地址，foo.append(3)foo中添加了3，相应foo1也添加了3</p>
+<hr>
+<pre><code>链接：https://www.nowcoder.com/questionTerminal/0d4af069d7d3417ba772ed93331f9057
+来源：牛客网
+
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] 
+b = a 
+c = copy.copy(a) 
+d = copy.deepcopy(a) 
+a.append(5) 
+a[4].append('c') 
+</code></pre>
+<p>解析</p>
+<pre><code>链接：https://www.nowcoder.com/questionTerminal/0d4af069d7d3417ba772ed93331f9057
+来源：牛客网
+
+import copy
+a = [1, 2, 3, 4, ['a', 'b']] 
+b = a     # 引用，除非直接给a重新赋值，否则a变则b变，b变则a变
+c = copy.copy(a)   # 浅复制，只会拷贝父对象， 不会拷贝父对象中的子对象，所以若a的子对象变则c 变,但是父对象变c不会变
+d = copy.deepcopy(a) #深拷贝，完全拷贝，完全独立于原对象，a变也不变
+a.append(5) # 改变父对象
+a[4].append('c')  #改变父对象中的 ['a', 'b']子对象
+
+# a=[1, 2, 3, 4, ['a', 'b','c'],5] 
+b=[1, 2, 3, 4, ['a', 'b','c'],5] 
+c=[1, 2, 3, 4, ['a', 'b','c']] 
+d=[1, 2, 3, 4, ['a', 'b']] 
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[bashrc修改导致linux系统指令不能用的解决方案]]></title>
+        <id>https://wwtttt.github.io/post/A3Qp5QYkS/</id>
+        <link href="https://wwtttt.github.io/post/A3Qp5QYkS/">
+        </link>
+        <updated>2019-04-19T10:46:37.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>参考博客:</p>
+<ul>
+<li>https://www.cnblogs.com/chenglee/p/7476852.html</li>
+</ul>
+<p>解决方案：</p>
+<p>重新赋予环境变量PATH就行</p>
+<pre><code class="language-shell">export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+</code></pre>
+]]></content>
+    </entry>
+</feed>
